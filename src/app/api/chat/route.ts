@@ -1,66 +1,48 @@
-import { NextResponse } from 'next/server';
-import { LISTINGS } from '@/lib/listings';
+import { NextResponse } from "next/server";
+import OpenAI from "openai";
+import { LISTINGS } from "@/lib/listings"; // make sure listings.ts exports the array
+
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 export async function POST(req: Request) {
-    try {
-        const { message, listingId } = await req.json();
+  try {
+    const { messages } = await req.json();
 
-        // 
-        const listing = LISTINGS.find((l => l.id === listingId))
+    // Prepare a "knowledge base" of listings
+    const listingsSummary = LISTINGS.map(l => {
+      return `
+- ${l.title}  
+  Address: ${l.address}  
+  Price: ${l.price}  
+  Bedrooms: ${l.beds}, Bathrooms: ${l.baths}, Sqft: ${l.sqft}  
+  Open House: ${l.openHouse ? l.openHouse : "No open house listed"}  
+  Description: ${l.description}  
+`;
+    }).join("\n");
 
-        const system = `
-You are an assistant for a real estate website. 
-Answer concisely, truthfully, and only within the known info.
-If unsure, say you'll connect the user with the agent.
+    const systemMessage = {
+      role: "system",
+      content: `You are a helpful real estate assistant. 
+Here are the current property listings you know about:
 
-If a listing is provided, use ONLY its details.
-If asked about open houses, pet policy, price, beds/baths, or neighborhood, use the listing.
-If the user asks for financing/legal advice, be general and suggest speaking to a professional.
+${listingsSummary}
 
-Tone: friendly, professional, concise.
-    `.trim();
-
-    const listingContext = listing
-      ? `Listing context:\n${JSON.stringify(listing, null, 2)}`
-      : "No specific listing context.";      
-
-      const body = {
-      model: process.env.OPENAI_MODEL || "gpt-4o-mini",
-      messages: [
-        { role: "system", content: system },
-        {
-          role: "user",
-          content: `${listingContext}\n\nUser question: ${message}`
-        }
-      ],
-      temperature: 0.3
+Answer user questions using ONLY this data. If asked about properties or details not in the list, politely say you don’t know.`,
     };
-    
-    const r = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.OPENAI_API_KEY!}`
-      },
-      body: JSON.stringify(body)
+
+    const response = await client.chat.completions.create({
+      model: "gpt-4o-mini", // lightweight & cheap
+      messages: [systemMessage, ...messages],
     });
 
-    if (!r.ok) {
-      const txt = await r.text();
-      return NextResponse.json(
-        { error: "OpenAI error", details: txt },
-        { status: 500 }
-      );
-    }
-
-    const data = await r.json();
-    const answer = data?.choices?.[0]?.message?.content ?? "Sorry, no answer.";
-
-    return NextResponse.json({ answer });
-    } catch (e: any) {
+    return NextResponse.json({
+      content: response.choices[0].message?.content,
+    });
+  } catch (error: any) {
+    console.error(error);
     return NextResponse.json(
-      { error: "Server error", details: e?.message },
+      { error: "Error processing request" },
       { status: 500 }
     );
   }
-} 
+}

@@ -1,41 +1,66 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 type Props = {
-    listingId?: string;
+  listingId?: string;
+};
+
+interface ChatMessage {
+  role: "user" | "assistant";
+  content: string;
 }
 
 export default function ChatWidget({ listingId }: Props) {
-    const [open, setOpen] = useState(false);
-    const [input, setInput] = useState("");
-    const [msgs, setMsgs] = useState<{ role: "user" | "bot"; text: string }[]>(
-      []
-    );
-    const [loading, setLoading] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [input, setInput] = useState("");
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [loading, setLoading] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
-    async function send() {
-        if (!input.trim()) return;
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
-        const user = input.trim();
-        setMsgs(m => [...m, { role: "user", text: user}]);
-        setInput("");
-        setLoading(true);
-        try {
-            const res = await fetch("/api/chat", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ message: user, listingId })
-            });
-            const data = await res.json();
-            setMsgs(m => [...m, { role: "bot", text: data.answer || "..." }]);
-        } catch {
-            setMsgs(m => [...m, { role: "bot", text: "Error reach assistant." }]);
-        } finally {
-            setLoading(false);
-        }
+  useEffect(scrollToBottom, [messages, loading]);
+
+  const send = async () => {
+    if (!input.trim()) return;
+
+    const userMessage: ChatMessage = { role: "user", content: input.trim() };
+    setMessages((prev) => [...prev, userMessage]);
+    setInput("");
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ 
+          messages: [...messages, userMessage], 
+          listingId 
+        }),
+      });
+
+      const data = await res.json();
+
+      const botMessage: ChatMessage = {
+        role: "assistant",
+        content: data.content || "Sorry, I didn't understand that.",
+      };
+
+      setMessages((prev) => [...prev, botMessage]);
+    } catch (err) {
+      setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: "Error reaching assistant." },
+      ]);
+      console.error(err);
+    } finally {
+      setLoading(false);
     }
+  };
 
-    return (
+  return (
     <>
       <button
         onClick={() => setOpen((o) => !o)}
@@ -53,7 +78,7 @@ export default function ChatWidget({ listingId }: Props) {
 
           {/* Messages */}
           <div className="flex-1 px-3 py-2 overflow-y-auto flex flex-col gap-2">
-            {msgs.map((m, i) => (
+            {messages.map((m, i) => (
               <div
                 key={i}
                 className={`px-3 py-2 rounded-lg max-w-[85%] text-sm ${
@@ -62,10 +87,11 @@ export default function ChatWidget({ listingId }: Props) {
                     : "self-start bg-gray-100"
                 }`}
               >
-                {m.text}
+                {m.content}
               </div>
             ))}
             {loading && <div className="opacity-60 text-sm">Thinking…</div>}
+            <div ref={messagesEndRef} />
           </div>
 
           {/* Input */}
