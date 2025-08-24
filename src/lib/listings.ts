@@ -30,7 +30,7 @@ export const LISTINGS: Listing[] = [
     features: ["Garage", "Renovated kitchen", "Near transit"],
     openHouse: "Sat 2–4 PM",
     petFriendly: true,
-    images: ["/demo/strathcona1.jpg", "/demo/strathcona2.jpg"],
+    images: ["/images/strathcona.jpg"],
     mls: "E4390001"
   },
   {
@@ -45,7 +45,7 @@ export const LISTINGS: Listing[] = [
     features: ["Gym", "Underground parking", "Balcony"],
     openHouse: "Sun 1–3 PM",
     petFriendly: false,
-    images: ["/demo/condo1.jpg", "/demo/condo2.jpg"],
+    images: ["/images/downtown-property/downtown.jpg", "/images/downtown-property/downtown-2.jpg", "/images/downtown-property/downtown-3.jpg", "/images/downtown-property/downtown-4.jpg"],
     mls: "E4390002"
   },
   {
@@ -58,7 +58,7 @@ export const LISTINGS: Listing[] = [
     address: "4123 122 St NW, Edmonton, AB",
     neighbourhood: "Aspen Gardens",
     features: ["Large yard", "Finished basement", "Quiet street"],
-    images: ["/demo/family1.jpg", "/demo/family2.jpg"],
+    images: ["/images/aspen.jpg"],
     mls: "E4390003"
   }
 ];

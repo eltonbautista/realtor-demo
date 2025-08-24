@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -10,10 +10,12 @@ import { Listing } from "@/lib/listings";
 export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeImages, setActiveImages] = useState<string[]>([]);
+  const [isOpen, setIsOpen] = useState(false);
 
   const openGallery = (images: string[], startIndex: number) => {
     setActiveImages(images);
     setCurrentIndex(startIndex);
+    setIsOpen(true);
   };
 
   const nextImage = () =>
@@ -26,6 +28,20 @@ export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) 
       prev === 0 ? activeImages.length - 1 : prev - 1
     );
 
+  // Keyboard navigation
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowRight") nextImage();
+      if (e.key === "ArrowLeft") prevImage();
+      if (e.key === "Escape") setIsOpen(false);
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen, activeImages.length]);
+
   return (
     <section className="max-w-6xl mx-auto py-16 px-6">
       <h2 className="text-3xl font-bold mb-10 text-center">Featured Listings</h2>
@@ -37,7 +53,7 @@ export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) 
           >
             {/* Image clickable */}
             {l.images?.length > 0 && (
-              <Dialog>
+              <Dialog open={isOpen} onOpenChange={setIsOpen}>
                 <DialogTrigger asChild>
                   <img
                     src={l.images[0]}
@@ -46,14 +62,14 @@ export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) 
                     onClick={() => openGallery(l.images, 0)}
                   />
                 </DialogTrigger>
-                <DialogContent className="max-w-3xl p-0 bg-black">
+                <DialogContent className="max-w-4xl p-0 bg-black">
                   <DialogTitle className="text-white sr-only">Featured Listings Gallery</DialogTitle>
                   {activeImages.length > 0 && (
-                    <div className="relative flex items-center justify-center">
+                    <div className="relative flex items-center justify-center w-full h-[80vh]">
                       <img
                         src={activeImages[currentIndex]}
                         alt="Gallery"
-                        className="max-h-[80vh] w-auto object-contain"
+                        className="max-h-full max-w-full object-contain"
                       />
                       {/* Prev Button */}
                       <Button
