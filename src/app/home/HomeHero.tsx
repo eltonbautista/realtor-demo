@@ -20,7 +20,7 @@ export default function HomeHero({
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl font-extrabold leading-tight mb-6"
+            className="heading-font text-4xl md:text-6xl font-extrabold leading-tight mb-6"
           >
             Real Estate Made Simple with{" "}
             <span className="bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent">

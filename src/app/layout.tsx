@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfair.className} ${lato.className} antialiased`}
+        className={`${inter.className} antialiased`}
       >
         <NavBar />
         {children}

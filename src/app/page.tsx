@@ -19,7 +19,7 @@ export default function Home() {
       {/* CTA Strip */}
       <RevealOnScroll>
         <section className="bg-blue-50 py-12 px-6 text-center">
-          <h2 className="text-2xl font-semibold mb-4">Ready to find your perfect home?</h2>
+          <h2 className="heading-font text-2xl font-semibold mb-4">Ready to find your perfect home?</h2>
           <p className="mb-6 text-gray-600">
             Let Sarah Li guide you every step of the way. Get started with a quick consultation today.
           </p>
@@ -36,10 +36,12 @@ export default function Home() {
         <FeaturedListings LISTINGS={LISTINGS} />
       </RevealOnScroll>
 
+      {/* FAQs Section */}
+
       {/* Contact Section */}
       <RevealOnScroll>
         <section className="bg-gray-50 py-16 px-6 text-center">
-          <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
+          <h2 className="heading-font text-3xl font-bold mb-6">Get In Touch</h2>
           <p className="text-gray-600 mb-8">
             Have questions about a property or want to schedule a showing? Contact Sarah directly.
           </p>

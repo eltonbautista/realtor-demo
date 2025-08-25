@@ -44,7 +44,7 @@ export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) 
 
   return (
     <section className="max-w-6xl mx-auto py-16 px-6">
-      <h2 className="text-3xl font-bold mb-10 text-center">Featured Listings</h2>
+      <h2 className="heading-font text-3xl font-bold mb-10 text-center">Featured Listings</h2>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {LISTINGS.map((l) => (
           <div
@@ -97,12 +97,12 @@ export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) 
 
             {/* Card Content */}
             <div className="p-6">
-              <h3 className="text-xl font-semibold">{l.title}</h3>
-              <p className="text-gray-600 mt-1">
+              <h3 className="heading-font text-xl font-semibold">{l.title}</h3>
+              <p className="text-gray-600 mt-3">
                 ${l.price.toLocaleString()} • {l.beds} bd • {l.baths} ba •{" "}
                 {l.sqft} sqft
               </p>
-              <p className="text-gray-500 text-sm mt-1">
+              <p className="text-gray-500 text-sm mt-2">
                 {l.address} — {l.neighbourhood}
               </p>
 
