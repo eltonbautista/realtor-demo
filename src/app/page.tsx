@@ -1,10 +1,10 @@
 import { LISTINGS } from "@/lib/listings";
+import { Button } from "@/components/ui/button";
 import ChatWidget from "@/components/ai/ChatWidget";
 import LeadForm from "@/components/ai/LeadForm";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import HomeHero from "@/app/home/HomeHero";
 import FeaturedListings from "@/app/home/FeaturedListings";
+import RevealOnScroll from "@/components/layout/RevealOnScroll";
 
 export default function Home() {
   return (
@@ -12,31 +12,42 @@ export default function Home() {
       {/* Hero Section */}
       <HomeHero
         realtorName="Sarah Li"
-        realtorDescription="Your trusted real estate agent for buying and selling homes."
+        realtorDescription="I guide you through every step of buying or selling a home with expertise and care.
+          My goal is to make the process simple, transparent, and tailored to your needs."
       />
 
       {/* CTA Strip */}
-      <section className="bg-blue-50 py-12 px-6 text-center">
-        <h2 className="text-2xl font-semibold mb-4">Ready to find your perfect home?</h2>
-        <p className="mb-6 text-gray-600">
-          Let Sarah Li guide you every step of the way. Get started with a quick consultation today.
-        </p>
-        <Button size="lg">Contact Sarah</Button>
-      </section>
+      <RevealOnScroll>
+        <section className="bg-blue-50 py-12 px-6 text-center">
+          <h2 className="text-2xl font-semibold mb-4">Ready to find your perfect home?</h2>
+          <p className="mb-6 text-gray-600">
+            Let Sarah Li guide you every step of the way. Get started with a quick consultation today.
+          </p>
+          <a href="mailto:sarah@example.com">
+            <Button size="lg" variant="outline">Contact Sarah</Button>
+          </a>
+        </section>
+      </RevealOnScroll>
+
+      {/* TODO: Testimonials Section */}
 
       {/* Listings Section */}
-      <FeaturedListings LISTINGS={LISTINGS} />
+      <RevealOnScroll>
+        <FeaturedListings LISTINGS={LISTINGS} />
+      </RevealOnScroll>
 
       {/* Contact Section */}
-      <section className="bg-gray-50 py-16 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
-        <p className="text-gray-600 mb-8">
-          Have questions about a property or want to schedule a showing? Contact Sarah directly.
-        </p>
-        <div className="max-w-md mx-auto">
-          <LeadForm />
-        </div>
-      </section>
+      <RevealOnScroll>
+        <section className="bg-gray-50 py-16 px-6 text-center">
+          <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
+          <p className="text-gray-600 mb-8">
+            Have questions about a property or want to schedule a showing? Contact Sarah directly.
+          </p>
+          <div className="max-w-md mx-auto">
+            <LeadForm />
+          </div>
+        </section>
+      </RevealOnScroll>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 py-6 text-center text-sm">
