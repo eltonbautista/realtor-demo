@@ -18,7 +18,7 @@ export default function NavBar() {
       <div className="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold text-blue-600">
-          Realtor<span className="text-gray-700">Demo</span>
+          Sarah<span className="text-gray-700">Li</span>
         </Link>
 
         {/* Desktop Menu */}
@@ -34,7 +34,7 @@ export default function NavBar() {
           ))}
           <Link
             href="/contact"
-            className="ml-4 px-4 py-2 bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700 transition"
+            className="ml-4 px-4 py-2 bg-blue-500 text-white rounded-xl shadow hover:bg-blue-700 transition"
           >
             Get in Touch
           </Link>
@@ -65,7 +65,7 @@ export default function NavBar() {
             ))}
             <Link
               href="/contact"
-              className="mt-2 px-4 py-2 bg-blue-600 text-white rounded-xl text-center shadow hover:bg-blue-700 transition"
+              className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-xl text-center shadow hover:bg-blue-700 transition"
               onClick={() => setOpen(false)}
             >
               Get in Touch

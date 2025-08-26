@@ -5,6 +5,7 @@ import LeadForm from "@/components/ai/LeadForm";
 import HomeHero from "@/app/home/HomeHero";
 import FeaturedListings from "@/app/home/FeaturedListings";
 import RevealOnScroll from "@/components/layout/RevealOnScroll";
+import HomeTestimonials from "@/app/home/HomeTestimonials";
 
 export default function Home() {
   return (
@@ -24,16 +25,19 @@ export default function Home() {
             Let Sarah Li guide you every step of the way. Get started with a quick consultation today.
           </p>
           <a href="mailto:sarah@example.com">
-            <Button size="lg" variant="outline">Contact Sarah</Button>
+            <Button className="px-6 py-3 border-2 hover:bg-blue-50 gap-2 text-lg" size="lg" variant="outline">Contact Sarah</Button>
           </a>
         </section>
       </RevealOnScroll>
 
-      {/* TODO: Testimonials Section */}
-
       {/* Listings Section */}
       <RevealOnScroll>
         <FeaturedListings LISTINGS={LISTINGS} />
+      </RevealOnScroll>
+
+      {/* TODO: Testimonials Section */}
+      <RevealOnScroll>
+        <HomeTestimonials />
       </RevealOnScroll>
 
       {/* FAQs Section */}

@@ -67,7 +67,7 @@ export default function ChatWidget({ listingId }: Props) {
       {/* Floating button */}
       <motion.button
         onClick={() => setOpen((o) => !o)}
-        className="fixed right-4 bottom-4 px-5 py-3 rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 transition flex items-center gap-2 z-50 cursor-pointer"
+        className="fixed right-4 bottom-4 px-5 py-3 rounded-full bg-blue-500 text-white shadow-lg hover:bg-blue-700 transition flex items-center gap-2 z-50 cursor-pointer"
         whileTap={{ scale: 0.95 }}
       >
         <Bot className="w-5 h-5" />
@@ -85,7 +85,7 @@ export default function ChatWidget({ listingId }: Props) {
             className="fixed right-4 bottom-20 w-80 max-h-[500px] bg-white border border-gray-200 rounded-2xl shadow-2xl flex flex-col overflow-hidden z-50"
           >
             {/* Header */}
-            <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100 bg-blue-600 text-white">
+            <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100 bg-blue-500 text-white">
               <Bot className="w-5 h-5" />
               <span className="font-semibold text-sm">AI Assistant</span>
             </div>
@@ -142,7 +142,7 @@ export default function ChatWidget({ listingId }: Props) {
               <button
                 onClick={send}
                 disabled={loading}
-                className="p-2 rounded-full bg-blue-500 text-white hover:bg-blue-600 disabled:opacity-50 flex items-center justify-center"
+                className="p-2 rounded-full bg-blue-500 text-white hover:bg-blue-500 disabled:opacity-50 flex items-center justify-center"
               >
                 <Send className="w-4 h-4" />
               </button>

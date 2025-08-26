@@ -38,7 +38,7 @@ export default function HomeHero({
           </motion.p>
 
           <div className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4">
-            <Button size="lg" className="px-6 py-3 bg-blue-600 hover:bg-blue-700 shadow-lg flex items-center gap-2 text-lg text-[#ffffff]">
+            <Button size="lg" className="px-6 py-3 bg-blue-500 hover:bg-blue-700 shadow-lg flex items-center gap-2 text-lg text-[#ffffff]">
               <Home size={20} /> Browse Listings
             </Button>
             <Button
