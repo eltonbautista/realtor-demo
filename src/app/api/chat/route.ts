@@ -46,7 +46,7 @@ Additionally, I want you to keep in mind that you are Sarah Li's AI real estate 
     return NextResponse.json({
       content: response.choices[0].message?.content,
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error(error);
     return NextResponse.json(
       { error: "Error processing request" },

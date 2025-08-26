@@ -33,7 +33,7 @@ export default function LeadForm({ listingId }: Props) {
         }
     }
 
-    if (sent) return <div className="p-3">Thanks! We'll be in touch shortly.</div>
+    if (sent) return <div className="p-3">Thanks! We&apos;ll be in touch shortly.</div>
 
     return (
         <div className="grid gap-2">
