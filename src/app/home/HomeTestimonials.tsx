@@ -17,7 +17,7 @@ export default function HomeTestimonials() {
   return (
     <section className="py-20 bg-[#F9FAFB]">
       <div className="container mx-auto text-center mb-14">
-        <h2 className="heading-font text-3xl font-extrabold tracking-tight text-[#111827]">
+        <h2 className="heading-font text-5xl font-extrabold tracking-tight text-[#111827]">
           What My Clients Say
         </h2>
         <p className="text-gray-600 mb-8 mt-3 max-w-2xl mx-auto">
@@ -61,7 +61,7 @@ export default function HomeTestimonials() {
             variant="outline"
             size="icon"
             onClick={scrollPrev}
-            className="pointer-events-auto -translate-x-6 rounded-full shadow-md bg-white hover:bg-blue-500 hover:text-[#ffffff] border-0 transition"
+            className="pointer-events-auto rounded-full shadow-md bg-white hover:bg-blue-500 hover:text-[#ffffff] border-0 transition"
           >
             <ChevronLeft className="h-6 w-6" />
           </Button>
@@ -69,7 +69,7 @@ export default function HomeTestimonials() {
             variant="outline"
             size="icon"
             onClick={scrollNext}
-            className="pointer-events-auto translate-x-6 rounded-full shadow-md bg-white hover:bg-blue-500 hover:text-[#ffffff] border-0 transition"
+            className="pointer-events-auto rounded-full shadow-md bg-white hover:bg-blue-500 hover:text-[#ffffff] border-0 transition"
           >
             <ChevronRight className="h-6 w-6" />
           </Button>

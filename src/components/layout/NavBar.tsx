@@ -34,7 +34,7 @@ export default function NavBar() {
           ))}
           <Link
             href="/contact"
-            className="ml-4 px-4 py-2 bg-blue-500 text-white rounded-xl shadow hover:bg-blue-700 transition"
+            className="ml-4 px-4 py-2 bg-blue-500 text-md text-white rounded-xl shadow hover:bg-[#111827] transition"
           >
             Get in Touch
           </Link>

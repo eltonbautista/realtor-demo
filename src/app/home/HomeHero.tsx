@@ -32,19 +32,19 @@ export default function HomeHero({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="text-lg md:text-xl text-gray-600 mb-8"
+            className="text-md md:text-xl text-gray-600 mb-8"
           >
             {realtorDescription}
           </motion.p>
 
           <div className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4">
-            <Button size="lg" className="px-6 py-3 bg-blue-500 hover:bg-blue-700 shadow-lg flex items-center gap-2 text-lg text-[#ffffff]">
+            <Button size="lg" className="px-6 py-3 bg-blue-500 hover:bg-[#111827] shadow-lg flex items-center gap-2 text-md text-[#ffffff]">
               <Home size={20} /> Browse Listings
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="px-6 py-3 border-2 hover:bg-blue-50 flex items-center gap-2 text-lg"
+              className="px-6 py-3 border-2 hover:bg-blue-50 flex items-center gap-2 text-md"
             >
               Learn More <ArrowRight size={20} />
             </Button>

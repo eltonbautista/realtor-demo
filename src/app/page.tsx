@@ -25,7 +25,7 @@ export default function Home() {
             Let Sarah Li guide you every step of the way. Get started with a quick consultation today.
           </p>
           <a href="mailto:sarah@example.com">
-            <Button className="px-6 py-3 border-2 hover:bg-blue-50 gap-2 text-lg" size="lg" variant="outline">Contact Sarah</Button>
+            <Button className="px-6 py-3 border-2 hover:bg-blue-50 gap-2 text-md" size="lg" variant="outline">Contact Sarah</Button>
           </a>
         </section>
       </RevealOnScroll>
@@ -45,7 +45,7 @@ export default function Home() {
       {/* Contact Section */}
       <RevealOnScroll>
         <section className="bg-gray-50 py-16 px-6 text-center">
-          <h2 className="heading-font text-3xl font-bold mb-6">Get In Touch</h2>
+          <h2 className="heading-font text-5xl font-bold mb-6">Get In Touch</h2>
           <p className="text-gray-600 mb-8">
             Have questions about a property or want to schedule a showing? Contact Sarah directly.
           </p>
@@ -56,9 +56,21 @@ export default function Home() {
       </RevealOnScroll>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-6 text-center text-sm">
-        © {new Date().getFullYear()} Sarah Li Real Estate. All rights reserved.
-      </footer>
+      {/* <footer>
+        <div className="bg-blue-500 grid justify-items-center">
+          <div className="max-w-6xl w-[100%]">
+            <div>
+              <p>Sarah Li Real Estate Agent</p>
+              <p>123 Sesame Street, Calgary, AB, Canada</p>
+              <a href="mailto:solutions@realtorsitespro.ca">solutions@realtorsitespro.ca</a>
+              <p>Powered by <a href="https://realtorsitespro.ca">RealtorSitesPro</a></p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p  className="bg-gray-900 text-gray-400 py-6 text-center text-sm">© {new Date().getFullYear()} Sarah Li Real Estate. All rights reserved.</p>
+        </div>
+      </footer> */}
 
       {/* Floating Chat Widget */}
       <div className="fixed bottom-6 right-6 z-50">

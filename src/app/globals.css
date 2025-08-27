@@ -6,7 +6,8 @@
 }
 
 .heading-font {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', serif;
+  text-transform: uppercase;
 }
 
 @theme inline {

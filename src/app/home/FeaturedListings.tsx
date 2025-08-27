@@ -44,7 +44,7 @@ export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) 
 
   return (
     <section className="max-w-6xl mx-auto py-16 px-6">
-      <h2 className="heading-font text-3xl font-bold mb-10 text-center">Featured Listings</h2>
+      <h2 className="heading-font text-5xl font-bold mb-10 text-center">Featured Listings</h2>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {LISTINGS.map((l) => (
           <div
@@ -58,7 +58,7 @@ export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) 
                   <img
                     src={l.images[0]}
                     alt={l.title}
-                    className="w-full h-48 object-cover cursor-pointer"
+                    className="w-full h-72 object-cover cursor-pointer"
                     onClick={() => openGallery(l.images, 0)}
                   />
                 </DialogTrigger>
