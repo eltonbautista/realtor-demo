@@ -17,7 +17,7 @@ export default function HomeTestimonials() {
   return (
     <section className="py-20 bg-[#F9FAFB]">
       <div className="container mx-auto text-center mb-14">
-        <h2 className="heading-font text-5xl font-extrabold tracking-tight text-[#111827]">
+        <h2 className="heading-font md:text-5xl text-4xl font-extrabold tracking-tight text-[#111827]">
           What My Clients Say
         </h2>
         <p className="text-gray-600 mb-8 mt-3 max-w-2xl mx-auto">
