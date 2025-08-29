@@ -60,5 +60,31 @@ export const LISTINGS: Listing[] = [
     features: ["Large yard", "Finished basement", "Quiet street"],
     images: ["/images/aspen.jpg"],
     mls: "E4390003"
+  },
+  {
+    id: "yeg-004",
+    title: "Apartment in Beautiful Oliver",
+    price: 299000,
+    beds: 1,
+    baths: 1,
+    sqft: 650,
+    address: "12345 67 Ave NW, Edmonton, AB",
+    neighbourhood: "Oliver",
+    features: ["Balcony", "City views", "In-suite laundry"],
+    images: ["/images/oliver.jpg"],
+    mls: "E4390004"
+  },
+  {
+    id: "yeg-005",
+    title: "Spacious 2-Bedroom in the Heart of Downtown",
+    price: 399000,
+    beds: 2,
+    baths: 2,
+    sqft: 850,
+    address: "4567 89 St NW, Edmonton, AB",
+    neighbourhood: "Downtown",
+    features: ["Open concept", "Stainless steel appliances", "Walking distance to shops"],
+    images: ["/images/downtowners.jpg"],
+    mls: "E4390005"
   }
 ];

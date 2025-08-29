@@ -65,30 +65,33 @@ export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) 
                 <DialogContent className="max-w-4xl p-0 bg-black">
                   <DialogTitle className="text-white sr-only">Featured Listings Gallery</DialogTitle>
                   {activeImages.length > 0 && (
-                    <div className="relative flex items-center justify-center w-full h-[80vh]">
+                    <div className="relative flex items-center justify-center w-full h-[60vh]">
                       <img
                         src={activeImages[currentIndex]}
                         alt="Gallery"
                         className="max-h-full max-w-full object-contain"
                       />
-                      {/* Prev Button */}
-                      <Button
-                        variant="ghost"
-                        size="icon"
-                        onClick={prevImage}
-                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/40 hover:bg-white/70 rounded-full"
-                      >
-                        <ChevronLeft className="h-6 w-6 text-black" />
-                      </Button>
-                      {/* Next Button */}
-                      <Button
-                        variant="ghost"
-                        size="icon"
-                        onClick={nextImage}
-                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/40 hover:bg-white/70 rounded-full"
-                      >
-                        <ChevronRight className="h-6 w-6 text-black" />
-                      </Button>
+                      {/* Prev/Next Buttons: Only show if more than 1 image */}
+                      {activeImages.length > 1 && (
+                        <>
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            onClick={prevImage}
+                            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/40 hover:bg-white/70 rounded-full"
+                          >
+                            <ChevronLeft className="h-6 w-6 text-black" />
+                          </Button>
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            onClick={nextImage}
+                            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/40 hover:bg-white/70 rounded-full"
+                          >
+                            <ChevronRight className="h-6 w-6 text-black" />
+                          </Button>
+                        </>
+                      )}
                     </div>
                   )}
                 </DialogContent>
