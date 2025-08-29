@@ -82,7 +82,7 @@ export default function HomeHero({
             <motion.div
               animate={imgTilt}
               transition={{ type: "spring", stiffness: 80, damping: 12 }}
-              className="w-full h-full"
+              className="w-full h-full relative"
               style={{ willChange: "transform" }}
             >
               <Image

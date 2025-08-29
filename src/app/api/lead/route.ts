@@ -1,14 +1,28 @@
 import { NextResponse } from "next/server";
-import { json } from "stream/consumers";
+import OpenAI from "openai";
+
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 export async function POST(req: Request) {
-    try {
-        const body = await req.json();
-        // For now we are just going to log the request since it's for the demo site
-        
-        console.log("NEW LEAD:", body);
-        return NextResponse.json({ ok: true });
-    } catch (e: unknown) {
-        return NextResponse.json({ ok: false, error: (e as Error)?.message }, { status: 500 });
-    }
+  try {
+    const body = await req.json();
+
+    // Example: ask AI to summarize and qualify lead
+    const completion = await client.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [
+        { role: "system", content: "You are a real estate assistant." },
+        { role: "user", content: `Here is a new lead: ${JSON.stringify(body)}` }
+      ]
+    });
+
+    const aiSummary = completion.choices[0].message.content;
+
+    console.log("NEW LEAD:", body);
+    console.log("AI SUMMARY:", aiSummary);
+
+    return NextResponse.json({ ok: true, aiSummary });
+  } catch (e: unknown) {
+    return NextResponse.json({ ok: false, error: (e as Error)?.message }, { status: 500 });
+  }
 }
