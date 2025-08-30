@@ -67,7 +67,7 @@ export default function ChatWidget({ listingId }: Props) {
       {/* Floating button */}
       <motion.button
         onClick={() => setOpen((o) => !o)}
-        className="fixed right-4 bottom-4 px-5 py-3 rounded-full bg-blue-500 text-white shadow-lg hover:bg-[#111827] transition flex items-center gap-2 z-50 cursor-pointer"
+        className="fixed right-4 bottom-4 font-semibold px-5 py-3 rounded-full bg-blue-500 text-white shadow-lg hover:bg-[#111827] transition flex items-center gap-2 z-50 cursor-pointer"
         whileTap={{ scale: 0.95 }}
       >
         <Bot className="w-5 h-5" />

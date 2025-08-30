@@ -1,5 +1,6 @@
 // Footer.tsx
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { Button } from "@/components/ui/button";
 
 export default function Footer() {
   return (
@@ -47,9 +48,12 @@ export default function Footer() {
               placeholder="Your email"
               className="px-4 py-2 rounded-md border border-gray-700 bg-[#111827] text-white focus:outline-none focus:ring-2 focus:ring-[#FACC15]"
             />
-            <button className="px-4 py-2 rounded-md bg-blue-500 text-[#ffffff] font-semibold hover:bg-yellow-400 transition">
-              Subscribe
-            </button>
+            <Button
+                className="px-8 py-4 text-lg font-semibold bg-gradient-to-r bg-blue-500 text-white shadow-lg hover:bg-blue-900 transition-all duration-200 rounded-xl"
+                size="lg"
+              >
+                Subscribe
+              </Button>
           </form>
         </div>
 

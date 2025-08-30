@@ -42,9 +42,36 @@ export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) 
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, activeImages.length]);
 
+  function renderGalleryArrows(imagesLength: number) {
+    const minImageLimit = 2;
+
+    if (imagesLength < minImageLimit) return null;
+
+    return (
+      <>
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={prevImage}
+          className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/40 hover:bg-white/70 rounded-full"
+        >
+          <ChevronLeft className="h-6 w-6 text-black" />
+        </Button>
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={nextImage}
+          className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/40 hover:bg-white/70 rounded-full"
+        >
+          <ChevronRight className="h-6 w-6 text-black" />
+        </Button>
+      </>
+    );
+  }
+
   return (
-    <section className="max-w-6xl mx-auto py-16 px-6">
-      <h2 className="heading-font md:text-5xl text-4xl font-bold mb-10 text-center">Featured Listings</h2>
+    <section className="max-w-6xl mx-auto py-16 px-6" id="listings">
+      <h2 className="heading-font md:text-5xl text-4xl font-bold mb-10 text-center text-blue-900">Featured Listings</h2>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {LISTINGS.map((l) => (
           <div
@@ -72,26 +99,7 @@ export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) 
                         className="max-h-full max-w-full object-contain"
                       />
                       {/* Prev/Next Buttons: Only show if more than 1 image */}
-                      {activeImages.length > 1 && (
-                        <>
-                          <Button
-                            variant="ghost"
-                            size="icon"
-                            onClick={prevImage}
-                            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/40 hover:bg-white/70 rounded-full"
-                          >
-                            <ChevronLeft className="h-6 w-6 text-black" />
-                          </Button>
-                          <Button
-                            variant="ghost"
-                            size="icon"
-                            onClick={nextImage}
-                            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/40 hover:bg-white/70 rounded-full"
-                          >
-                            <ChevronRight className="h-6 w-6 text-black" />
-                          </Button>
-                        </>
-                      )}
+                      {renderGalleryArrows(activeImages.length)}
                     </div>
                   )}
                 </DialogContent>
@@ -100,7 +108,7 @@ export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) 
 
             {/* Card Content */}
             <div className="p-6">
-              <h3 className="heading-font text-xl font-semibold">{l.title}</h3>
+              <h3 className="heading-font text-xl font-semibold text-blue-900">{l.title}</h3>
               <p className="text-gray-600 mt-3">
                 ${l.price.toLocaleString()} • {l.beds} bd • {l.baths} ba •{" "}
                 {l.sqft} sqft

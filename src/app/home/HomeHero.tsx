@@ -30,16 +30,23 @@ export default function HomeHero({
     setImgTilt({ rotateX: 0, rotateY: 0 });
   }
 
+  function scrollToSection(sectionId: string) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <section className="relative w-full min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
-      <div className="relative z-10 max-w-screen-2xl mx-auto w-full px-4 sm:px-8 lg:px-16 flex flex-col xl:flex-row items-center md:items-stretch gap-8 xl:gap-16 h-auto xl:h-[80vh]">
+      <div className="relative z-10 max-w-screen-2xl mx-auto w-full px-6 sm:px-8 lg:px-16 pb-10 md:pb-0 flex flex-col xl:flex-row items-center md:items-stretch gap-8 xl:gap-16 h-auto xl:h-[80vh]">
         {/* Left: Text */}
         <div className="flex-1 flex flex-col justify-center text-center md:text-left py-8 xl:py-0">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="heading-font text-5xl xl:text-6xl font-extrabold leading-tight mb-6"
+            className="heading-font text-5xl xl:text-6xl font-extrabold leading-tight mb-6 text-blue-900"
           >
             Real Estate Made Simple with{" "}
             <span className="bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent">
@@ -57,13 +64,16 @@ export default function HomeHero({
           </motion.p>
 
           <div className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4">
-            <Button size="lg" className="px-6 py-3 text-base sm:text-lg bg-blue-500 hover:bg-[#111827] shadow-lg flex items-center gap-2 text-[#ffffff]">
+            <Button
+              size="lg"
+              className="px-6 py-3 text-base sm:text-lg bg-blue-500 hover:bg-blue-900 font-semibold shadow-lg flex items-center gap-2 text-[#ffffff]"
+              onClick={() => scrollToSection("listings")}>
               <Home size={20} /> Browse Listings
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="px-6 py-3 text-base sm:text-lg border-2 hover:bg-blue-50 flex items-center gap-2"
+              className="px-6 py-3 text-base sm:text-lg border-2 hover:bg-blue-50 flex items-center gap-2 font-semibold"
             >
               Learn More <ArrowRight size={20} />
             </Button>
