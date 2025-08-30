@@ -66,14 +66,14 @@ export default function HomeHero({
           <div className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4">
             <Button
               size="lg"
-              className="px-6 py-3 text-base sm:text-lg bg-blue-500 hover:bg-blue-900 font-semibold shadow-lg flex items-center gap-2 text-[#ffffff]"
+              className="px-6 py-3 text-base sm:text-lg bg-blue-500 hover:bg-blue-900 font-semibold shadow-lg flex items-center gap-2 text-[#ffffff] rounded-xl"
               onClick={() => scrollToSection("listings")}>
               <Home size={20} /> Browse Listings
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="px-6 py-3 text-base sm:text-lg border-2 hover:bg-blue-50 flex items-center gap-2 font-semibold"
+              className="px-6 py-3 text-base sm:text-lg border-2 hover:bg-blue-50 flex items-center gap-2 font-semibold rounded-xl"
             >
               Learn More <ArrowRight size={20} />
             </Button>

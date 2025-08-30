@@ -45,8 +45,8 @@ export default function HomeTestimonials() {
                       “{t.text}”
                     </p>
                     <div>
-                      <p className="font-semibold text-blue-500 text-lg">{t.name}</p>
-                      <p className="text-sm text-gray-500">{t.role}</p>
+                      <p className="font-semibold text-blue-700 text-lg">{t.name}</p>
+                      <p className="text-sm text-gray-600">{t.role}</p>
                     </div>
                   </CardContent>
                 </Card>

@@ -81,7 +81,7 @@ export default function LeadForm({ listingId }: Props) {
           <button
             onClick={submit}
             disabled={loading}
-            className="px-3 py-2 rounded-lg bg-blue-500 text-white text-md hover:bg-blue-900 font-semibold disabled:opacity-50 cursor-pointer"
+            className="px-3 py-2 rounded-lg bg-blue-500 text-white text-md hover:bg-blue-900 font-semibold disabled:opacity-50 cursor-pointer transition-all duration-200"
           >
             {loading ? "Sending…" : "Get more info"}
           </button>
