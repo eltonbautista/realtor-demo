@@ -49,7 +49,7 @@ export default function LeadForm({ listingId }: Props) {
             onChange={(e) => setForm({ ...form, email: e.target.value })}
             className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          <div className="flex gap-2">
+          <div className="grid gap-2 md:flex">
             <input
               placeholder="Budget (CAD)"
               value={form.budget}

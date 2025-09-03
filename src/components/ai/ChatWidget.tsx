@@ -82,7 +82,7 @@ export default function ChatWidget({ listingId }: Props) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 40 }}
             transition={{ duration: 0.25 }}
-            className="fixed right-4 bottom-20 w-80 max-h-[500px] bg-white border border-gray-200 rounded-2xl shadow-2xl flex flex-col overflow-hidden z-50"
+            className="fixed right-4 bottom-20 w-74 md:wd-80 max-h-[500px] bg-white border border-gray-200 rounded-2xl shadow-2xl flex flex-col overflow-hidden z-50"
           >
             {/* Header */}
             <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100 bg-blue-500 text-white">
