@@ -11,8 +11,22 @@ export async function POST(req: Request) {
     const completion = await client.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
-        { role: "system", content: "You are a real estate assistant." },
-        { role: "user", content: `Here is a new lead: ${JSON.stringify(body)}` }
+        {
+          role: "system",
+          content: `You are an AI real estate assistant. 
+          Your job is to qualify new leads based on the details they provide.
+          Always respond in JSON with the following fields:
+          - summary: short human-friendly summary of the lead
+          - buyerType: "buyer" | "seller" | "unknown"
+          - budgetRange: string (if provided)
+          - preApproved: true | false | "unknown"
+          - timeline: string (e.g. "immediate", "3-6 months", "unknown")
+          - priorityScore: 1-10 (10 = very hot lead, 1 = low quality)`
+        },
+        {
+          role: "user",
+          content: `Here is a new lead: ${JSON.stringify(body)}`
+        }
       ]
     });
 

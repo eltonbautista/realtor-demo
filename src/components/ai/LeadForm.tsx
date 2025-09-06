@@ -14,6 +14,8 @@ export default function LeadForm({ listingId }: Props) {
         budget: "",
         beds: "3+",
         area: "",
+        preapproved: "",
+        timeline: "",
         message: ""
     });
 
@@ -70,6 +72,18 @@ export default function LeadForm({ listingId }: Props) {
             placeholder="Preferred area/neighborhood"
             value={form.area}
             onChange={(e) => setForm({ ...form, area: e.target.value })}
+            className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <input
+            placeholder="Timeline (e.g. immediate, 3-6 months)"
+            value={form.timeline}
+            onChange={(e) => setForm({ ...form, timeline: e.target.value })}
+            className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <input
+            placeholder="Pre-approved? (yes/no)"
+            value={form.preapproved}
+            onChange={(e) => setForm({ ...form, preapproved: e.target.value })}
             className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <textarea
