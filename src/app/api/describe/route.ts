@@ -10,7 +10,7 @@ export async function POST(req: Request) {
 
     const prompt = `
     You are a real estate copywriter. 
-    Take the following raw notes and turn them into a polished, engaging property listing description (150-200 words):
+    Take the following raw notes and turn them into a polished, engaging property listing description (50 words):
 
     Notes: ${notes}
     `;

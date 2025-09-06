@@ -7,6 +7,7 @@ export default function InternalPage() {
   const [description, setDescription] = useState("");
   const [loading, setLoading] = useState(false);
 
+  // Function to call the API and generate description
   const generateDescription = async () => {
     setLoading(true);
     setDescription("");
@@ -25,6 +26,7 @@ export default function InternalPage() {
   return (
     <div className="max-w-2xl mx-auto p-6 space-y-4">
       <h1 className="text-2xl font-bold">AI Listing Description Generator</h1>
+      {/* As user types in the textarea, update notes state */}
       <textarea
         value={notes}
         onChange={(e) => setNotes(e.target.value)}
@@ -32,6 +34,7 @@ export default function InternalPage() {
         className="w-full p-3 border rounded-md"
         rows={5}
       />
+      {/* Button generates description using AI API */}
       <button
         onClick={generateDescription}
         disabled={loading}

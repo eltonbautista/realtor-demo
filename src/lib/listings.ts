@@ -26,7 +26,7 @@ export const LISTINGS: Listing[] = [
     address: "10345 83 Ave NW, Edmonton, AB",
     neighbourhood: "Strathcona",
     description:
-      "Bright, south-facing living room, renovated kitchen, quick access to Whyte Ave.",
+      `Discover modern living in Strathcona! This stunning 3-bedroom, 2-bath home offers 1,450 sqft of beautifully designed space, perfect for contemporary lifestyles. Priced at $489,000, it combines style and comfort in a desirable neighborhood. Don't miss your chance to call 10345 83 Ave NW your new home!`,
     features: ["Garage", "Renovated kitchen", "Near transit"],
     openHouse: "Sat 2–4 PM",
     petFriendly: true,
@@ -42,6 +42,7 @@ export const LISTINGS: Listing[] = [
     sqft: 980,
     address: "9720 106 St NW, Edmonton, AB",
     neighbourhood: "Downtown",
+    description: `Welcome to your urban oasis in the heart of downtown Edmonton! This stunning 2-bedroom, 2-bathroom condo offers mesmerizing river views and modern living in 980 sqft. Priced at $349,000, this stylish retreat combines convenience with charm, making it the perfect place to call home. Don’t miss your chance!`,
     features: ["Gym", "Underground parking", "Balcony"],
     openHouse: "Sun 1–3 PM",
     petFriendly: false,
@@ -57,6 +58,7 @@ export const LISTINGS: Listing[] = [
     sqft: 1900,
     address: "4123 122 St NW, Edmonton, AB",
     neighbourhood: "Aspen Gardens",
+    description: `Discover this charming family home in Aspen Gardens, Edmonton! Priced at $575,000, this spacious 1,900 sqft residence features 4 bedrooms and 3 bathrooms, making it perfect for growing families. Enjoy the convenience of nearby top-rated schools and a welcoming neighborhood. Your ideal home awaits at 4123 122 St NW!`,
     features: ["Large yard", "Finished basement", "Quiet street"],
     images: ["/images/aspen.jpg"],
     mls: "E4390003"
@@ -70,6 +72,7 @@ export const LISTINGS: Listing[] = [
     sqft: 650,
     address: "12345 67 Ave NW, Edmonton, AB",
     neighbourhood: "Oliver",
+    description: `Experience urban living in this beautiful 1-bedroom apartment located in Oliver. Priced at $299,000, this cozy 650 sqft space features modern finishes and stunning city views. Enjoy the convenience of in-suite laundry and a private balcony. Don’t miss out on this gem!`,
     features: ["Balcony", "City views", "In-suite laundry"],
     images: ["/images/oliver.jpg"],
     mls: "E4390004"
