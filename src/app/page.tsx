@@ -15,19 +15,19 @@ export default function Home() {
       {/* Hero Section */}
       <HomeHero
         realtorName="Sarah Li"
-        realtorDescription="I guide you through every step of buying or selling a home with expertise and care.
+        realtorDescription="Personally guiding you through every step of buying or selling a home with expertise and care.
           My goal is to make the process simple, transparent, and tailored to your needs."
       />
+
+      {/* Listings Section */}
+      <FeaturedListings LISTINGS={LISTINGS} />
 
       {/* CTA Strip */}
       <RevealOnScroll>
         <HomeCta />
       </RevealOnScroll>
 
-      {/* Listings Section */}
-      <FeaturedListings LISTINGS={LISTINGS} />
-
-      {/* TODO: Testimonials Section */}
+      {/* Testimonials Section */}
       <RevealOnScroll>
         <HomeTestimonials />
       </RevealOnScroll>
