@@ -124,7 +124,10 @@ export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) 
               )}
 
               <div className="mt-4">
-                <LeadForm listingId={l.id} />
+                {/* <LeadForm listingId={l.id} /> */}
+                <p>
+                  {l.description ? l.description : "No description available. Please generate one using the internal tool."}
+                </p>
               </div>
 
               <p className="text-xs text-gray-400 mt-3">
