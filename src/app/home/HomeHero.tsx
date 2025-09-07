@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { animate, motion, useMotionValue } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Home, ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -13,28 +13,29 @@ export default function HomeHero({
   realtorName: string;
   realtorDescription: string;
 }) {
-  const [imgTilt, setImgTilt] = useState({ rotateX: 0, rotateY: 0 });
+  const [imgTilt] = useState({ rotateX: 0, rotateY: 0 });
   const imgContainerRef = useRef<HTMLDivElement>(null);
 
-  const frameRef = useRef<number | undefined>(undefined);
+  const rotateX = useMotionValue(0);
+  const rotateY = useMotionValue(0);
 
   function handleMouseMove(e: React.MouseEvent) {
     const rect = imgContainerRef.current?.getBoundingClientRect();
     if (!rect) return;
+
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    const rotateY = ((x / rect.width) - 0.5) * 5;
-    const rotateX = -((y / rect.height) - 0.5) * 5;
-  
-    cancelAnimationFrame(frameRef.current!);
-    frameRef.current = requestAnimationFrame(() => {
-      setImgTilt({ rotateX, rotateY });
-    });
+
+    const newRotateY = ((x / rect.width) - 0.5) * 5;
+    const newRotateX = -((y / rect.height) - 0.5) * 5;
+
+    rotateX.set(newRotateX);
+    rotateY.set(newRotateY);
   }
 
-
   function handleMouseLeave() {
-    setImgTilt({ rotateX: 0, rotateY: 0 });
+    animate(rotateX, 0, { type: "spring", stiffness: 60, damping: 18 });
+    animate(rotateY, 0, { type: "spring", stiffness: 60, damping: 18 });
   }
 
   function scrollToSection(sectionId: string) {
@@ -88,7 +89,7 @@ export default function HomeHero({
         </div>
 
         {/* Right: House Image */}
-        <div className="flex-1 flex justify-center items-center w-full">
+        <div className="flex-1 flex justify-center items-center w-full relative w-full h-56 sm:h-72 md:h-96 xl:h-[70vh] 2xl:h-[80vh] max-h-[80vh] min-h-[200px] max-w-[600px] xl:max-w-[700px]">
           <motion.div
             ref={imgContainerRef}
             className="relative w-full h-56 sm:h-72 md:h-96 xl:h-[70vh] 2xl:h-[80vh] max-h-[80vh] min-h-[200px] max-w-[600px] xl:max-w-[700px]"
@@ -100,7 +101,11 @@ export default function HomeHero({
               animate={imgTilt}
               transition={{ type: "spring", stiffness: 80, damping: 12 }}
               className="w-full h-full relative"
-              style={{ willChange: "transform" }}
+              style={{
+          rotateX,
+          rotateY,
+          transformStyle: "preserve-3d",
+        }}
             >
               <Image
                 src="/images/hero-img.jpg"
