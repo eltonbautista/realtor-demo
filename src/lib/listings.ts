@@ -12,6 +12,7 @@ export type Listing = {
     openHouse?: string; // e.g. "Sat 2-4PM"
     petFriendly?: boolean;
     images: string[];
+    type?: "house" | "duplex" | "townhouse" | "apartment";
     mls?: string;
 }
 
@@ -75,6 +76,7 @@ export const LISTINGS: Listing[] = [
     description: `Experience urban living in this beautiful 1-bedroom apartment located in Oliver. Priced at $299,000, this cozy 650 sqft space features modern finishes and stunning city views. Enjoy the convenience of in-suite laundry and a private balcony. Don’t miss out on this gem!`,
     features: ["Balcony", "City views", "In-suite laundry"],
     images: ["/images/oliver.jpg"],
+    type: "apartment",
     mls: "E4390004"
   },
   {
