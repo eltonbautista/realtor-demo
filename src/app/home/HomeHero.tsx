@@ -16,6 +16,8 @@ export default function HomeHero({
   const [imgTilt, setImgTilt] = useState({ rotateX: 0, rotateY: 0 });
   const imgContainerRef = useRef<HTMLDivElement>(null);
 
+  const frameRef = useRef<number | undefined>(undefined);
+
   function handleMouseMove(e: React.MouseEvent) {
     const rect = imgContainerRef.current?.getBoundingClientRect();
     if (!rect) return;
@@ -23,8 +25,13 @@ export default function HomeHero({
     const y = e.clientY - rect.top;
     const rotateY = ((x / rect.width) - 0.5) * 5;
     const rotateX = -((y / rect.height) - 0.5) * 5;
-    setImgTilt({ rotateX, rotateY });
+  
+    cancelAnimationFrame(frameRef.current!);
+    frameRef.current = requestAnimationFrame(() => {
+      setImgTilt({ rotateX, rotateY });
+    });
   }
+
 
   function handleMouseLeave() {
     setImgTilt({ rotateX: 0, rotateY: 0 });
