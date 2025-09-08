@@ -15,7 +15,7 @@ export default function HomeTestimonials() {
   const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
   return (
-    <section className="py-20 bg-[#F9FAFB]">
+    <section className="py-20">
       <div className="container mx-auto text-center mb-14 px-6 md:px-0">
         <h2 className="heading-font md:text-5xl text-4xl font-extrabold tracking-tight text-blue-900">
           What My Clients Say
