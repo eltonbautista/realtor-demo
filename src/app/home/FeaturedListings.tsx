@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Heart, BedDouble, Bath, Ruler } from "lucide-react";
 import LeadForm from "@/components/ai/LeadForm";
 import { Listing } from "@/lib/listings";
+import VirtualTour from "@/components/layout/VirtualTour";
 
 export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -111,10 +112,8 @@ export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) 
                   <DialogTitle className="text-white sr-only">Featured Listings Gallery</DialogTitle>
                   {activeImages.length > 0 && (
                     <div className="relative flex items-center justify-center w-full h-[60vh]">
-                      <img
-                        src={activeImages[currentIndex]}
-                        alt="Gallery"
-                        className="max-h-full max-w-full object-contain"
+                      <VirtualTour
+                        image={activeImages[currentIndex]}
                       />
                       {renderGalleryArrows(activeImages.length)}
                     </div>
