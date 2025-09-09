@@ -2,12 +2,12 @@ import { LISTINGS } from "@/lib/listings";
 import { Button } from "@/components/ui/button";
 import ChatWidget from "@/components/ai/ChatWidget";
 import LeadForm from "@/components/ai/LeadForm";
-import HomeHero from "@/app/home/HomeHero";
-import FeaturedListings from "@/app/home/FeaturedListings";
+import HomeHero from "@/app/demo/DemoHero";
+import FeaturedListings from "@/app/demo/FeaturedListings";
 import RevealOnScroll from "@/components/layout/RevealOnScroll";
-import HomeTestimonials from "@/app/home/HomeTestimonials";
-import HomeCta from "@/app/home/HomeCta";
-import HomeContact from "@/app/home/HomeContact";
+import HomeTestimonials from "@/app/demo/DemoTestimonials";
+import HomeCta from "@/app/demo/DemoCta";
+import HomeContact from "@/app/demo/DemoContact";
 
 export default function Home() {
   return (
