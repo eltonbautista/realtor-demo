@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 export default function HomeContact() {
   return (
-    <section className="relative w-full min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
+    <section id="contact" className="relative w-full min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
       <div className="relative py-12 px-4 sm:px-8 max-w-7xl mx-auto my-16 flex flex-col md:flex-row gap-12 md:gap-20">
         {/* Left: Lead Form and Intro */}
         <div className="w-full md:w-3/5 flex flex-col justify-center">
@@ -20,7 +20,7 @@ export default function HomeContact() {
               Let&apos;s Find Your Perfect Home
             </h1>
             <p className="text-gray-500 text-base md:text-lg mb-8">
-              Tell me about your needs and my AI assistant will analyze your requirements to provide personalized recommendations.
+              Tell me about your ideal property.
             </p>
           </div>
           <LeadForm />
@@ -77,7 +77,7 @@ export default function HomeContact() {
               <li className="flex items-start gap-2">
                 <span className="mt-1 w-2 h-2 rounded-full bg-blue-400 inline-block" />
                 <div>
-                  <span className="font-semibold">AI-Enhanced Service</span>
+                  <span className="font-semibold">Automated Services</span>
                   <div className="text-gray-500 text-sm">Advanced technology to match you with perfect properties</div>
                 </div>
               </li>

@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export default function HomeCta() {
     return (
-      <div className="px-6">
+      <div className="px-6 md:pt-16">
         <section className="relative bg-gradient-to-r from-blue-100 via-blue-50 to-white pt-16 pb-6 md:py-16 px-4 sm:px-8 md:px-10 rounded-3xl shadow-2xl max-w-4xl mx-auto mb-0 mt-40 md:mt-24 md:mb-6 border border-blue-200">
           <div className="absolute -top-36 left-1/2 -translate-x-1/2 flex flex-col items-center w-full">
             <img
@@ -22,7 +22,7 @@ export default function HomeCta() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="mailto:sarah@example.com?subject=I'm%20interested%20in%20buying%20a%20house">
                 <Button
-                  className="px-8 py-4 text-lg font-semibold bg-blue-500 text-white shadow-lg hover:bg-blue-900 transition-all duration-200 rounded-xl w-full"
+                  className="px-8 py-4 text-lg font-semibold bg-blue-500 text-white shadow-lg hover:bg-blue-700 transition-all duration-200 rounded-xl w-full"
                   size="lg"
                 >
                   Buy a House

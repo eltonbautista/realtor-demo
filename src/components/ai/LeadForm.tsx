@@ -181,14 +181,14 @@ export default function LeadForm({ listingId }: Props) {
       <button
         type="submit"
         disabled={loading}
-        className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-500 text-white text-lg font-bold hover:bg-blue-700 transition-all duration-200 disabled:opacity-50"
+        className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-500 text-white text-lg font-bold hover:bg-blue-700 transition-all duration-200 disabled:opacity-50 cursor-pointer"
       >
         <Sparkles className="w-5 h-5" />
-        {loading ? "Sending…" : "Get Personalized Recommendations"}
+        {loading ? "Sending…" : "Find My Dream Home"}
       </button>
-      <div className="text-xs text-grey-200 text-center mt-4">
+      <p className="text-xs text-grey-200 text-center mt-4">
         Your information will be analyzed by AI to provide personalized property recommendations and market insights.
-      </div>
+      </p>
     </form>
   );
 }
