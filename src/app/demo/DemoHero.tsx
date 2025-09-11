@@ -3,7 +3,6 @@
 import { useRef, useState } from "react";
 import { animate, motion, useMotionValue } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Home, ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 export default function HomeHero({
@@ -46,53 +45,54 @@ export default function HomeHero({
   }
 
   return (
-    <section className="relative w-full min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
-      <div className="relative z-10 max-w-screen-2xl mx-auto w-full px-6 sm:px-8 lg:px-16 pb-10 md:pb-0 flex flex-col xl:flex-row items-center md:items-stretch gap-8 xl:gap-16 h-auto xl:h-[80vh]">
+    <section className="relative w-full min-h-[80vh] flex items-center justify-center bg-[#fafafa] overflow-hidden">
+      <div className="relative z-10 max-w-screen-2xl mx-auto w-full px-6 sm:px-8 lg:px-16 flex flex-col xl:flex-row items-center xl:items-stretch gap-8 xl:gap-0 h-auto xl:h-[70vh]">
         {/* Left: Text */}
-        <div className="flex-1 flex flex-col justify-center text-center md:text-left py-8 xl:py-0">
+        <div className="flex-1 flex flex-col justify-center text-left py-8 xl:py-0 xl:justify-center xl:items-start">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="heading-font text-5xl xl:text-6xl font-extrabold leading-tight mb-6 text-blue-900"
+            className="font-serif font-light text-4xl md:text-5xl xl:text-6xl leading-tight mb-6 text-gray-700"
           >
-            Real Estate Made Simple with{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent">
-              {realtorName}.
-            </span>
+            Homes in Santa Barbara
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="text-md md:text-xl text-gray-600 mb-8"
+            className="text-base md:text-lg xl:text-xl text-gray-400 mb-8 max-w-xl"
           >
-            {realtorDescription}
+            California American Real Estate Partners is #1 in the Santa Barbara MLS for transactions, with over $1 Billion in sales. For nearly two decades, {realtorName} has been the top producing real estate team in Montecito and the greater Santa Barbara region.
           </motion.p>
 
-          <div className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4">
-            <Button
-              size="lg"
-              className="px-6 py-3 text-base sm:text-lg bg-blue-500 hover:bg-blue-700 font-semibold shadow-lg flex items-center gap-2 text-[#ffffff] rounded-xl"
-              onClick={() => scrollToSection("listings")}>
-              <Home size={20} /> Browse Listings
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="px-6 py-3 text-base sm:text-lg border-2 hover:bg-blue-50 flex items-center gap-2 font-semibold rounded-xl"
-            >
-              Learn More <ArrowRight size={20} />
-            </Button>
-          </div>
+          <Button
+            size="lg"
+            className="px-6 py-3 text-base bg-yellow-100 hover:bg-yellow-200 text-gray-700 font-semibold rounded-md shadow-none border-none"
+            onClick={() => scrollToSection("listings")}
+          >
+            View Our Properties
+          </Button>
         </div>
 
         {/* Right: House Image */}
-        <div className="flex-1 flex justify-center items-center w-full relative w-full h-56 sm:h-72 md:h-96 xl:h-[70vh] 2xl:h-[80vh] max-h-[80vh] min-h-[200px] max-w-[600px] xl:max-w-[700px]">
+        <div className="flex-1 flex justify-center items-center w-full relative min-h-[300px] max-w-[700px]">
+          {/* Blurred background image */}
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[420px] h-[260px] md:w-[520px] md:h-[320px] xl:w-[600px] xl:h-[650px] rounded-2xl overflow-hidden opacity-60 scale-110 blur-[2px] pointer-events-none z-0 shadow-xl">
+            <Image
+              src="/images/hero-img.jpg"
+              alt="Modern house"
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 768px) 90vw, (max-width: 1280px) 50vw, 700px"
+            />
+          </div>
+          {/* Foreground image */}
           <motion.div
             ref={imgContainerRef}
-            className="relative w-full h-56 sm:h-72 md:h-96 xl:h-[70vh] 2xl:h-[80vh] max-h-[80vh] min-h-[200px] max-w-[600px] xl:max-w-[700px]"
+            className="relative z-10 w-[320px] h-[200px] md:w-[400px] md:h-[250px] xl:w-[480px] xl:h-[300px] rounded-2xl overflow-hidden shadow-2xl"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             style={{ perspective: 1000 }}
@@ -102,16 +102,16 @@ export default function HomeHero({
               transition={{ type: "spring", stiffness: 80, damping: 12 }}
               className="w-full h-full relative"
               style={{
-          rotateX,
-          rotateY,
-          transformStyle: "preserve-3d",
-        }}
+                rotateX,
+                rotateY,
+                transformStyle: "preserve-3d",
+              }}
             >
               <Image
                 src="/images/hero-img.jpg"
                 alt="Modern house"
                 fill
-                className="object-cover rounded-3xl md:rounded-4xl drop-shadow-xl"
+                className="object-cover"
                 priority
                 sizes="(max-width: 768px) 90vw, (max-width: 1280px) 50vw, 700px"
               />

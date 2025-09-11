@@ -73,37 +73,44 @@ export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) 
   const visibleListings = showAll ? LISTINGS : LISTINGS.slice(0, 3);
 
   return (
-    <section className="max-w-7xl mx-auto py-16 px-4 sm:px-6" id="listings">
-      <h2 className="heading-font md:text-5xl text-4xl font-bold mb-2 text-center text-blue-900">Featured Listings</h2>
-      <p className="text-lg text-blue-600 text-center mb-10">
-        Discover exceptional properties in Edmonton's most desirable neighborhoods
+    <section className="max-w-7xl mx-auto py-24 px-4 sm:px-8" id="listings">
+      <h2 className="font-serif font-light md:text-5xl text-4xl mb-2 text-left text-[#3a4251]">
+        Featured Listings
+      </h2>
+      <p className="text-lg text-[#8b98ad] text-left mb-12 max-w-2xl">
+        Discover exceptional properties in Santa Barbara's most desirable neighborhoods.
       </p>
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
         {visibleListings.map((l) => (
           <div
             key={l.id}
-            className="rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden bg-white flex flex-col"
+            className="rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden bg-white flex flex-col border border-[#e6eaf1]"
+            style={{ minHeight: 480 }}
           >
             {/* Image clickable */}
             {l.images?.length > 0 && (
               <Dialog open={isOpen} onOpenChange={setIsOpen}>
                 <DialogTrigger asChild>
-                  <div className="relative cursor-pointer group" onClick={() => openGallery(l.images, 0)}>
+                  <div
+                    className="relative cursor-pointer group"
+                    onClick={() => openGallery(l.images, 0)}
+                  >
                     <img
                       src={l.images[0]}
                       alt={l.title}
-                      className="w-full h-56 object-cover"
+                      className="w-full h-60 object-cover transition group-hover:scale-105 duration-300"
+                      style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0 }}
                     />
                     {/* Property type badge */}
-                    <span className="absolute top-3 left-3 bg-blue-100 text-blue-700 text-xs font-semibold px-4 py-1 rounded-full shadow capitalize">
+                    <span className="absolute top-4 left-4 bg-white/80 text-[#3a4251] text-xs font-semibold px-4 py-1 rounded-full shadow capitalize border border-[#e6eaf1]">
                       {l.type || "House"}
                     </span>
                     {/* Heart icon */}
-                    <span className="absolute top-3 right-3 bg-white/80 rounded-full p-2 shadow hover:bg-white">
-                      <Heart className="h-5 w-5 text-blue-300" />
+                    <span className="absolute top-4 right-4 bg-white/90 rounded-full p-2 shadow border border-[#e6eaf1] hover:bg-yellow-50 transition">
+                      <Heart className="h-5 w-5 text-[#e6eaf1]" />
                     </span>
                     {/* Price overlay */}
-                    <span className="absolute bottom-4 left-4 bg-white text-blue-500 text-xl font-bold px-6 py-2 rounded-xl shadow-lg">
+                    <span className="absolute bottom-4 left-4 bg-white/90 text-[#3a4251] text-xl font-bold px-6 py-2 rounded-xl shadow border border-[#e6eaf1]">
                       ${l.price.toLocaleString()}
                     </span>
                   </div>
@@ -112,9 +119,7 @@ export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) 
                   <DialogTitle className="text-white sr-only">Featured Listings Gallery</DialogTitle>
                   {activeImages.length > 0 && (
                     <div className="relative flex items-center justify-center w-full h-[60vh]">
-                      <VirtualTour
-                        image={activeImages[currentIndex]}
-                      />
+                      <VirtualTour image={activeImages[currentIndex]} />
                       {renderGalleryArrows(activeImages.length)}
                     </div>
                   )}
@@ -123,22 +128,22 @@ export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) 
             )}
 
             {/* Card Content */}
-            <div className="flex flex-col flex-1 p-6">
-              <h3 className="heading-font text-lg font-bold text-blue-900 mb-1">{l.title}</h3>
-              <p className="flex items-center text-gray-500 text-sm mb-1">
+            <div className="flex flex-col flex-1 p-7">
+              <h3 className="font-serif font-light text-2xl text-[#3a4251] mb-2">{l.title}</h3>
+              <p className="flex items-center text-[#8b98ad] text-sm mb-1">
                 <svg className="w-4 h-4 mr-1 inline" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                 {l.address}
               </p>
-              <p className="text-gray-500 font-bold text-sm mb-2">{l.neighbourhood}</p>
-              <p className="text-gray-500 text-sm mb-3 truncate">{l.description}</p>
+              <p className="text-[#b0b8c9] font-semibold text-xs mb-2">{l.neighbourhood}</p>
+              <p className="text-[#8b98ad] text-sm mb-3 truncate">{l.description}</p>
               <div className="flex items-center gap-4 mb-3">
-                <span className="flex items-center text-blue-600 text-sm font-medium">
+                <span className="flex items-center text-[#3a4251] text-sm font-medium">
                   <BedDouble className="w-4 h-4 mr-1" /> {l.beds}
                 </span>
-                <span className="flex items-center text-blue-600 text-sm font-medium">
+                <span className="flex items-center text-[#3a4251] text-sm font-medium">
                   <Bath className="w-4 h-4 mr-1" /> {l.baths}
                 </span>
-                <span className="flex items-center text-blue-600 text-sm font-medium">
+                <span className="flex items-center text-[#3a4251] text-sm font-medium">
                   <Ruler className="w-4 h-4 mr-1" /> {l.sqft.toLocaleString()} sq ft
                 </span>
               </div>
@@ -147,13 +152,13 @@ export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) 
                 {l.features?.map((feature) => (
                   <span
                     key={feature}
-                    className="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full"
+                    className="bg-[#f5f7fa] text-[#3a4251] text-xs font-semibold px-3 py-1 rounded-full border border-[#e6eaf1]"
                   >
                     {feature}
                   </span>
                 ))}
               </div>
-              <Button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold w-full mt-auto">
+              <Button className="bg-yellow-100 hover:bg-yellow-200 text-[#3a4251] font-semibold w-fit px-6 py-2 rounded-md mt-auto shadow-none border-none transition">
                 View Details
               </Button>
             </div>
@@ -161,10 +166,10 @@ export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) 
         ))}
       </div>
       {LISTINGS.length > 3 && (
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mt-12">
           <Button
             variant="outline"
-            className="border-blue-300 text-blue-500 font-semibold px-8 py-3 rounded-lg hover:bg-blue-50"
+            className="border-[#e6eaf1] text-[#3a4251] font-semibold px-8 py-3 rounded-lg hover:bg-yellow-50 transition"
             onClick={() => setShowAll((prev) => !prev)}
           >
             {showAll ? "Show Less" : "View All Listings"}
