@@ -32,11 +32,10 @@ export default function HomeHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 3 }}
             >
-              <p className="bg-gradient-to-r from-white to-blue-500 bg-clip-text text-transparent text-base sm:text-lg mb-8 max-w-md">
-                Spend less time chasing leads and more time closing deals.
-                We build smart realtor websites that qualify and respond to buyers for you.
+              <p className="bg-gradient-to-r from-white to-blue-500 bg-clip-text text-transparent text-base sm:text-lg mb-8 max-w-md font-semibold">
+                Let your experience and expertise shine through a website that tells your professional story effectively.
               </p>
-                        <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#demo"
                 className="flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-500 hover:bg-blue-700 text-white font-semibold shadow transition text-base"
@@ -49,8 +48,8 @@ export default function HomeHero() {
               >
                 <Calendar className="w-5 h-5" /> Book Free Call
               </a>
-                        </div>
-            </motion.div>
+            </div>
+          </motion.div>
         </div>
 
         {/* Right: Demo Cards */}
