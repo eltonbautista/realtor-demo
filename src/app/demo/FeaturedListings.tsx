@@ -78,7 +78,7 @@ export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) 
         Featured Listings
       </h2>
       <p className="text-lg text-[#8b98ad] text-left mb-12 max-w-2xl">
-        Discover exceptional properties in Santa Barbara's most desirable neighborhoods.
+        Discover exceptional properties in Santa Barbara&apos;s most desirable neighborhoods.
       </p>
       <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
         {visibleListings.map((l) => (
