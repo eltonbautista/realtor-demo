@@ -11,30 +11,47 @@ export default function HomeHero() {
 
       <div className="relative z-10 flex flex-col lg:flex-row items-center w-full max-w-7xl mx-auto px-6 py-24 lg:py-0">
         {/* Left: Text */}
-        <div
-          className="w-full lg:w-1/2 flex flex-col justify-center items-start">
-          <Typewriter
-            className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white mb-6 heading-font"
-            typingSpeed={30}
-            lineDelay={200}
-            lines={[
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white from-10% to-blue-500 to-30%">
-                AI-Powered Websites
-              </span>,
-              <span className="block text-white">for Realtors That</span>,
-              <span className="block text-white">Capture More</span>,
-              <span className="block text-white">Leads,</span>,
-              <span className="block text-white">Automatically.</span>,
-            ]}
-          />
+        <div className="w-full lg:w-1/2 flex flex-col justify-center items-start">
+          <div className="mb-2">
+            <Typewriter
+              className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white mb-0 heading-font"
+              typingSpeed={30}
+              lineDelay={200}
+              lines={[
+                "AI-Powered Websites",
+                "for Realtors That",
+                "Capture More",
+                "Leads,",
+              ]}
+            />
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 3 }}
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 2.5 }}
             >
-              <p className="bg-gradient-to-r from-white to-blue-500 bg-clip-text text-transparent text-base sm:text-lg mb-8 max-w-md font-semibold">
-                Let your experience and expertise shine through a website that tells your professional story effectively.
-              </p>
+              <span
+                className="relative px-1"
+                style={{ display: "inline-block" }}
+              >
+                <span className="relative z-10 font-extrabold bg-gradient-to-r from-white via-pink-500 to-blue-500 bg-clip-text text-transparent animate-gradient-move text-4xl sm:text-5xl md:text-6xl">
+                  Automatically.
+                </span>
+                <span
+                  aria-hidden
+                  className="absolute inset-0 rounded-md blur-lg opacity-60 bg-gradient-to-r from-white via-pink-500 to-blue-500"
+                  style={{ zIndex: 0 }}
+                />
+              </span>
+            </motion.div>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 3 }}
+          >
+            <p className="bg-gradient-to-r from-white to-blue-500 bg-clip-text text-transparent text-base sm:text-lg mb-8 max-w-md font-semibold">
+              Let your experience and expertise shine through a website that tells your professional story effectively.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#demo"
@@ -68,6 +85,43 @@ export default function HomeHero() {
           </div>
         </div>
       </div>
+      {/* Gradient animation keyframes */}
+      <style jsx global>{`
+        @keyframes gradient-move {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        .animate-gradient-move {
+          background-size: 200% 200%;
+          animation: gradient-move 3s ease-in-out infinite;
+        }
+      `}</style>
+      <style jsx global>{`
+  @keyframes gradient-move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .animate-gradient-move {
+    background-size: 200% 200%;
+    animation: gradient-move 3s ease-in-out infinite;
+  }
+  /* Static noise effect */
+  .static-noise {
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml;utf8,<svg width='40' height='40' xmlns='http://www.w3.org/2000/svg'><filter id='noiseFilter'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23noiseFilter)'/></svg>");
+    opacity: 0.7;
+    animation: static-flicker 0.15s steps(2) infinite;
+    border-radius: 0.375rem;
+  }
+  @keyframes static-flicker {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+  }
+`}</style>
     </section>
   );
 }
