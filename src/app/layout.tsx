@@ -28,8 +28,8 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["600"] });
 const roboto = Roboto({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
-  title: "Realtor Demo Website",
-  description: "A demo website to show prospect clients.",
+  title: "RealtorSitesPro - Edmonton Real Estate Websites",
+  description: "Professional, SEO-Optimized Real Estate Websites Tailored for Edmonton Realtors. Showcase Listings, Capture Leads, and Grow Your Business with Our Expert Solutions.",
 };
 
 export default function RootLayout({

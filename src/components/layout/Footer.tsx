@@ -13,7 +13,6 @@ export default function Footer() {
           <p>123 Main Street</p>
           <p>Edmonton, AB T5J 2N2, Canada</p>
           <a href="mailto:solutions@realtorsitespro.ca">solutions@realtorsitespro.ca</a>
-          <p>Phone: (780) 555-1234</p>
         </div>
 
         {/* Links */}
@@ -60,7 +59,7 @@ export default function Footer() {
       </div>
 
       <div className="mt-12 border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">
-        © {new Date().getFullYear()} Realtor Demo. All rights reserved.
+        © {new Date().getFullYear()} RealtorSitesPro. All rights reserved.
       </div>
     </footer>
   );

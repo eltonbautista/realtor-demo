@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
@@ -18,8 +19,18 @@ export default function NavBar() {
     <nav className="w-full border-b border-gray-200 bg-white sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
         {/* Logo */}
-        <Link href="/" className="text-xl font-bold text-blue-600">
-          Sarah<span className="text-gray-700">Li</span>
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            className="md:w-32 md:h-32 w-24 h-24 object-contain"
+            src="/images/rslogo.png"
+            alt="Realtor Sites Pro Logo"
+            width={130}
+            height={130}
+            priority
+          />
+          {/* <span className="text-xl font-bold text-blue-600 hidden sm:inline visually-hidden">
+            RealtorSites<span className="text-gray-700">Pro</span>
+          </span> */}
         </Link>
 
         {/* Desktop Menu */}

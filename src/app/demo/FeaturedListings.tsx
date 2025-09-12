@@ -3,8 +3,7 @@
 import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, Heart, BedDouble, Bath, Ruler } from "lucide-react";
-import LeadForm from "@/components/ai/LeadForm";
+import { ChevronLeft, ChevronRight, BedDouble, Bath, Ruler } from "lucide-react";
 import { Listing } from "@/lib/listings";
 import VirtualTour from "@/components/layout/VirtualTour";
 
@@ -104,10 +103,6 @@ export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) 
                     {/* Property type badge */}
                     <span className="absolute top-4 left-4 bg-white/80 text-[#3a4251] text-xs font-semibold px-4 py-1 rounded-full shadow capitalize border border-[#e6eaf1]">
                       {l.type || "House"}
-                    </span>
-                    {/* Heart icon */}
-                    <span className="absolute top-4 right-4 bg-white/90 rounded-full p-2 shadow border border-[#e6eaf1] hover:bg-yellow-50 transition">
-                      <Heart className="h-5 w-5 text-[#e6eaf1]" />
                     </span>
                     {/* Price overlay */}
                     <span className="absolute bottom-4 left-4 bg-white/90 text-[#3a4251] text-xl font-bold px-6 py-2 rounded-xl shadow border border-[#e6eaf1]">

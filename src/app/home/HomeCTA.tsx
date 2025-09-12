@@ -102,28 +102,28 @@ export default function HomeCTA() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 w-full">
             <a
-              href="#demo"
+              href="/demo"
               className="flex items-center justify-center gap-2 px-8 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg shadow transition w-full sm:w-auto"
             >
               <Play className="w-5 h-5" />
               See Demo
             </a>
-            <a
-              href="#book"
+            {/* <a
+              href="/book"
               className="flex items-center justify-center gap-2 px-8 py-3 rounded-xl bg-black/80 hover:bg-black text-white font-bold text-lg shadow transition border border-gray-700 w-full sm:w-auto"
             >
               <Calendar className="w-5 h-5" />
               Book a Free Call
-            </a>
+            </a> */}
           </div>
           <div className="text-gray-400 text-base mb-2">Or get in touch directly:</div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-blue-300 text-base">
             <a
-              href="mailto:contact@realtorsitespro.ca"
+              href="mailto:solutions@realtorsitespro.ca"
               className="flex items-center gap-2 hover:underline"
             >
               <Mail className="w-4 h-4" />
-              contact@realtorsitespro.ca
+              solutions@realtorsitespro.ca
             </a>
             <span className="hidden sm:inline text-gray-500">|</span>
             <span className="flex items-center gap-2">
