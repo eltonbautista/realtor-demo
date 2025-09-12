@@ -1,7 +1,7 @@
-import { isValidElement, useEffect, useState } from "react";
+import { isValidElement, useEffect, useState, ReactNode, ReactElement } from "react";
 
 type Props = {
-  lines: React.ReactNode[];
+  lines: ReactNode[];
   typingSpeed?: number;
   lineDelay?: number;
   className?: string;
@@ -20,14 +20,14 @@ export default function Typewriter({
     let line = 0;
     let char = 0;
 
-    function getText(node: React.ReactNode): string {
+    function getText(node: ReactNode): string {
       if (typeof node === "string" || typeof node === "number") return String(node);
       if (isValidElement(node)) {
-        // If children is an array, join; else, just get the string
-        if (Array.isArray((node.props as any).children)) {
-          return (node.props as any).children.join("");
+        const children = (node as ReactElement).props.children;
+        if (Array.isArray(children)) {
+          return children.join("");
         }
-        return (node.props as any).children || "";
+        return children || "";
       }
       return "";
     }

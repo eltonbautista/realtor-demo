@@ -7,13 +7,13 @@ export default function HomeInformation() {
         {/* Left: Text */}
         <div className="flex-1 max-w-2xl">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
-            Hi, I'm{" "}
+            Hi, I&apos;m{" "}
             <span className="bg-gradient-to-r from-blue-500 to-white bg-clip-text text-transparent">
               Elton
             </span>
           </h2>
           <p className="text-white text-xl mb-6">
-            I'm a website developer based in Edmonton. After years in web development, I saw realtors struggling with outdated sites that don't generate leads.
+            I&apos;m a website developer based in Edmonton. After years in web development, I saw realtors struggling with outdated sites that don&apos;t generate leads.
           </p>
           <p className="text-gray-300 text-lg mb-8">
             RealtorSitesPro was built to fix that. I combine modern web technology with AI automation to create websites that actually work for real estate professionals—not just look pretty.

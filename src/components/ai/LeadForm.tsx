@@ -50,7 +50,7 @@ export default function LeadForm({ listingId }: Props) {
   if (sent)
     return (
       <div className="p-3 text-center text-[#3a4251] font-semibold">
-        Thanks! We'll be in touch shortly.
+        Thanks! We&apos;ll be in touch shortly.
       </div>
     );
 

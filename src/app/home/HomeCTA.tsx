@@ -98,7 +98,7 @@ export default function HomeCTA() {
             </span>
           </h2>
           <p className="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">
-            Stop losing potential clients to competitors with better websites. Let's build you an AI-powered site that works around the clock to grow your business.
+            Stop losing potential clients to competitors with better websites. Let&apos;s build you an AI-powered site that works around the clock to grow your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 w-full">
             <a
