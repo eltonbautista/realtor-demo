@@ -1,4 +1,4 @@
-import { ReactElement, isValidElement, useEffect, useState } from "react";
+import { isValidElement, useEffect, useState } from "react";
 
 type Props = {
   lines: React.ReactNode[];
