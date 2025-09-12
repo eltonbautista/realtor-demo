@@ -50,7 +50,7 @@ export default function HomeTestimonials() {
         {/* Heading */}
         <RevealOnScroll>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 text-white">
-            The Numbers Don't Lie:{" "}
+            The Numbers Don&apos;t Lie:{" "}
             <span className="bg-gradient-to-r from-blue-500 to-white bg-clip-text text-transparent">
               Online Presence Matters
             </span>
