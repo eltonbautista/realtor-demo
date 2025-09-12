@@ -23,11 +23,12 @@ export default function Typewriter({
     function getText(node: ReactNode): string {
       if (typeof node === "string" || typeof node === "number") return String(node);
       if (isValidElement(node)) {
-        const children = (node as ReactElement).props.children;
+        const element = node as ReactElement<Record<string, unknown>>;
+        const children = element.props.children;
         if (Array.isArray(children)) {
           return children.join("");
         }
-        return children || "";
+        return typeof children === "string" || typeof children === "number" ? String(children) : "";
       }
       return "";
     }
