@@ -73,7 +73,7 @@ export default function ChatWidget({ listingId }: Props) {
         >
           <Bot className="w-6 h-6 text-blue-500" />
           <div className="flex flex-col items-start">
-            <span className="font-semibold text-base leading-tight">Sarah&apos;s AI Assistant</span>
+            <span className="font-semibold text-base leading-tight">Sarah's AI Assistant</span>
             <span className="text-xs text-blue-300 font-medium mt-0.5">Usually replies instantly</span>
           </div>
         </motion.button>
@@ -94,7 +94,7 @@ export default function ChatWidget({ listingId }: Props) {
               <div className="flex items-center gap-2">
                 <Bot className="w-5 h-5 text-blue-500" />
                 <div>
-                  <span className="font-semibold text-base text-gray-700">Sarah&apos;s AI Assistant</span>
+                  <span className="font-semibold text-base text-gray-700">Sarah's AI Assistant</span>
                   <div className="text-xs text-blue-300 font-medium leading-tight">Usually replies instantly</div>
                 </div>
               </div>

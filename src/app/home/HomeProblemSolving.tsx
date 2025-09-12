@@ -85,7 +85,7 @@ export default function HomeProblemSolving() {
         >
           <div className="bg-[#232736] rounded-xl px-8 py-8 max-w-2xl w-full text-center mx-auto shadow-lg">
             <div className="text-xl font-bold bg-gradient-to-r from-blue-500 to-white bg-clip-text text-transparent mb-2 heading-font">
-              We build sites that don&apos;t just look good—they work for you 24/7
+              We build sites that don't just look good—they work for you 24/7
             </div>
             <div className="text-white">
               Our AI-powered realtor websites automatically capture, qualify, and nurture leads while you focus on what you do best: closing deals.

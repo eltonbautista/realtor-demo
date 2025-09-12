@@ -20,7 +20,7 @@ export default function HomeContact() {
               AI-Powered Lead Generation
             </div>
             <h1 className="font-serif text-4xl font-light text-[#3a4251] mb-2">
-              Let&apos;s Find Your Perfect Home
+              Let's Find Your Perfect Home
             </h1>
             <p className="text-[#8b98ad] text-base md:text-lg mb-8">
               Tell me about your ideal property.
@@ -95,7 +95,7 @@ export default function HomeContact() {
                 <span className="mt-2 w-2 h-2 rounded-full bg-yellow-100 inline-block" />
                 <div>
                   <span className="font-semibold">Full-Service Support</span>
-                  <div className="text-[#8b98ad] text-sm">From search to closing, I&apos;m with you every step</div>
+                  <div className="text-[#8b98ad] text-sm">From search to closing, I'm with you every step</div>
                 </div>
               </li>
               <li className="flex items-start gap-2">
