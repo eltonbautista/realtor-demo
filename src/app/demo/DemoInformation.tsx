@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function DemoAgent() {
@@ -17,12 +18,14 @@ export default function DemoAgent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="font-serif text-4xl md:text-5xl font-normal text-gray-900 mb-6 tracking-tight"
+            className="font-serif text-4xl md:text-5xl font-normal text-gray-900 mb-6 tracking-tight uppercase"
           >
-            SHANNON LAVIN
+            Sarah Li
           </motion.h2>
           <p className="text-gray-700 text-base md:text-lg mb-10 max-w-xl leading-relaxed">
-            A licensed Real Estate Broker, Shannon specializes in luxury condominium sales in downtown Boston; working with sellers, buyers, investors, and developers. Shannon’s sales achievements have quickly ranked her among Boston’s top real estate professionals. She is notoriously known for her unwavering professionalism, market expertise, and resolute work ethic.
+            As a distinguished Real Estate Broker specializing in Edmonton&apos;s luxury condominium market,
+            Sarah curates exclusive opportunities for high-net-worth clients, developers, and strategic investors.
+            Her remarkable ascent to the upper echelon of Edmonton&apos;s real estate professionals is built upon her sterling reputation for discretion, sophisticated market insight, and unwavering commitment to exceptional results.
           </p>
           <button
             className="px-8 py-3 border border-gray-900 text-gray-900 font-medium rounded-none hover:bg-gray-900 hover:text-white transition-colors text-base tracking-wide"
@@ -34,12 +37,15 @@ export default function DemoAgent() {
         {/* Image Content */}
         <div className="flex-1 flex items-center justify-center relative w-full md:w-auto">
           {/* Subtle shadow/frame effect */}
-          <div className="absolute top-4 left-4 w-full h-full bg-gray-200 z-0 hidden md:block" />
-          <img
+          <div className="absolute top-4 left-4 w-full h-full bg-gray-100 z-0 hidden md:block" />
+          <Image
             src="/images/sarahli.jpg"
             alt="Shannon Lavin"
+            width={320}
+            height={400}
             className="relative z-10 w-full max-w-md object-cover shadow-lg"
             style={{ aspectRatio: "4/5" }}
+            priority
           />
         </div>
       </div>

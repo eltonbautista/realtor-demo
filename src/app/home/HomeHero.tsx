@@ -22,6 +22,7 @@ export default function HomeHero() {
               lineDelay={200}
               lines={[
                 "Leads In.",
+                "Appointments Booked.",
                 "Deals Closed.",
               ]}
             />
@@ -31,7 +32,7 @@ export default function HomeHero() {
               transition={{ duration: 0.8, delay: 1 }}
             >
               <span className="relative px-1" style={{ display: "inline-block" }}>
-                <span className="relative z-10 font-extrabold bg-gradient-to-r from-white via-pink-500 to-blue-500 bg-clip-text text-transparent animate-gradient-move text-4xl sm:text-5xl md:text-6xl drop-shadow-[0_0_16px_rgba(0,176,255,0.7)]">
+                <span className="relative z-10 font-extrabold bg-gradient-to-r from-white via-pink-500 to-blue-500 bg-clip-text text-transparent animate-gradient-move text-5xl sm:text-6xl md:text-7xl drop-shadow-[0_0_16px_rgba(0,176,255,0.7)]">
                   Automatically.
                 </span>
                 <span
@@ -47,7 +48,7 @@ export default function HomeHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.5 }}
           >
-            <p className="bg-gradient-to-r from-white to-blue-500 bg-clip-text text-transparent text-base sm:text-lg mb-8 max-w-md font-semibold">
+            <p className="bg-gradient-to-r from-white to-blue-500 bg-clip-text text-transparent text-base sm:text-lg my-6 max-w-md font-semibold">
               Stop chasing. Start closing. <br/>Capture leads effortlessly, build trust instantly, and close more deals with a smarter website.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -64,9 +65,9 @@ export default function HomeHero() {
                 <Calendar className="w-5 h-5" /> Get My Free Consultation
               </a>
             </div>
-            <h2 className="bg-gradient-to-r text-white bg-clip-text text-transparent text-base sm:text-lg mb-8 max-w-md font-semibold italic mt-4">
+            {/* <h2 className="bg-gradient-to-r text-white bg-clip-text text-transparent text-base mb-8 max-w-md font-semibold italic mt-4">
               Built by real estate web specialists. Designed to convert — not just look pretty.
-            </h2>
+            </h2> */}
           </motion.div>
         </div>
 

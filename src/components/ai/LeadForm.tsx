@@ -57,7 +57,7 @@ export default function LeadForm({ listingId }: Props) {
   return (
     <form
       onSubmit={submit}
-      className="bg-white border border-[#e6eaf1] rounded-2xl shadow-xl max-w-xl py-8 px-8"
+      className="bg-white border border-[#e6eaf1] shadow-xl max-w-xl py-8 px-8"
       autoComplete="off"
     >
       <h2 className="text-2xl md:text-3xl font-serif font-light mb-8 text-[#3a4251] flex items-center gap-2">
@@ -73,7 +73,7 @@ export default function LeadForm({ listingId }: Props) {
             placeholder="Your full name"
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
-            className="w-full border border-[#e6eaf1] rounded-xl px-4 py-3 text-base bg-transparent placeholder-[#b0b8c9] focus:outline-none focus:ring-2 focus:ring-yellow-100"
+            className="w-full border border-[#e6eaf1] px-4 py-3 text-base bg-transparent placeholder-[#b0b8c9] focus:outline-none focus:ring-2 focus:ring-yellow-100"
           />
         </div>
         <div>
@@ -86,7 +86,7 @@ export default function LeadForm({ listingId }: Props) {
             placeholder="your@email.com"
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
-            className="w-full border border-[#e6eaf1] rounded-xl px-4 py-3 text-base bg-transparent placeholder-[#b0b8c9] focus:outline-none focus:ring-2 focus:ring-yellow-100"
+            className="w-full border border-[#e6eaf1] px-4 py-3 text-base bg-transparent placeholder-[#b0b8c9] focus:outline-none focus:ring-2 focus:ring-yellow-100"
           />
         </div>
         <div>
@@ -98,7 +98,7 @@ export default function LeadForm({ listingId }: Props) {
             placeholder="(780) 123-4567"
             value={form.phone}
             onChange={(e) => setForm({ ...form, phone: e.target.value })}
-            className="w-full border border-[#e6eaf1] rounded-xl px-4 py-3 text-base bg-transparent placeholder-[#b0b8c9] focus:outline-none focus:ring-2 focus:ring-yellow-100"
+            className="w-full border border-[#e6eaf1] px-4 py-3 text-base bg-transparent placeholder-[#b0b8c9] focus:outline-none focus:ring-2 focus:ring-yellow-100"
           />
         </div>
         {/* Add preapproval select here */}
@@ -109,7 +109,7 @@ export default function LeadForm({ listingId }: Props) {
           <select
             value={form.preapproved}
             onChange={(e) => setForm({ ...form, preapproved: e.target.value })}
-            className="w-full border border-[#e6eaf1] rounded-xl px-4 py-3 text-base bg-transparent text-[#3a4251] placeholder-[#b0b8c9] focus:outline-none focus:ring-2 focus:ring-yellow-100"
+            className="w-full border border-[#e6eaf1] px-4 py-3 text-base bg-transparent text-[#3a4251] placeholder-[#b0b8c9] focus:outline-none focus:ring-2 focus:ring-yellow-100"
           >
             <option value="">Select an option</option>
             {PREAPPROVED.map((p) => (
@@ -128,7 +128,7 @@ export default function LeadForm({ listingId }: Props) {
           <select
             value={form.budget}
             onChange={(e) => setForm({ ...form, budget: e.target.value })}
-            className="w-full border border-[#e6eaf1] rounded-xl px-4 py-3 text-base bg-transparent text-[#3a4251] placeholder-[#b0b8c9] focus:outline-none focus:ring-2 focus:ring-yellow-100"
+            className="w-full border border-[#e6eaf1] px-4 py-3 text-base bg-transparent text-[#3a4251] placeholder-[#b0b8c9] focus:outline-none focus:ring-2 focus:ring-yellow-100"
           >
             <option value="">Select budget range</option>
             {BUDGET_RANGES.map((b) => (
@@ -145,7 +145,7 @@ export default function LeadForm({ listingId }: Props) {
           <select
             value={form.propertyType}
             onChange={(e) => setForm({ ...form, propertyType: e.target.value })}
-            className="w-full border border-[#e6eaf1] rounded-xl px-4 py-3 text-base bg-transparent text-[#3a4251] placeholder-[#b0b8c9] focus:outline-none focus:ring-2 focus:ring-yellow-100"
+            className="w-full border border-[#e6eaf1] px-4 py-3 text-base bg-transparent text-[#3a4251] placeholder-[#b0b8c9] focus:outline-none focus:ring-2 focus:ring-yellow-100"
           >
             <option value="">Select property type</option>
             {PROPERTY_TYPES.map((t) => (
@@ -164,7 +164,7 @@ export default function LeadForm({ listingId }: Props) {
           placeholder="When are you looking to buy/sell?"
           value={form.timeline}
           onChange={(e) => setForm({ ...form, timeline: e.target.value })}
-          className="w-full border border-[#e6eaf1] rounded-xl px-4 py-3 text-base bg-transparent placeholder-[#b0b8c9] focus:outline-none focus:ring-2 focus:ring-yellow-100"
+          className="w-full border border-[#e6eaf1] px-4 py-3 text-base bg-transparent placeholder-[#b0b8c9] focus:outline-none focus:ring-2 focus:ring-yellow-100"
         />
       </div>
       <div className="mb-8">
@@ -175,13 +175,13 @@ export default function LeadForm({ listingId }: Props) {
           placeholder="Describe what you're looking for, preferred neighborhoods, must-have features, or any questions you have..."
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
-          className="w-full border border-[#e6eaf1] rounded-xl px-4 py-3 text-base bg-transparent placeholder-[#b0b8c9] focus:outline-none focus:ring-2 focus:ring-yellow-100 min-h-[90px]"
+          className="w-full border border-[#e6eaf1] px-4 py-3 text-base bg-transparent placeholder-[#b0b8c9] focus:outline-none focus:ring-2 focus:ring-yellow-100 min-h-[90px]"
         />
       </div>
       <button
         type="submit"
         disabled={loading}
-        className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-yellow-100 hover:bg-yellow-200 text-[#3a4251] text-lg font-semibold shadow-none border-none transition-all duration-200 disabled:opacity-50 cursor-pointer"
+        className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-yellow-100 hover:bg-yellow-200 text-[#3a4251] text-lg font-semibold shadow-none border-none transition-all duration-200 disabled:opacity-50 cursor-pointer"
       >
         <Sparkles className="w-5 h-5" />
         {loading ? "Sending…" : "Find My Dream Home"}

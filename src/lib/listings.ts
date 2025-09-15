@@ -32,6 +32,7 @@ export const LISTINGS: Listing[] = [
     openHouse: "Sat 2–4 PM",
     petFriendly: true,
     images: ["/images/strathcona.jpg"],
+    type: "house",
     mls: "E4390001"
   },
   {
@@ -48,6 +49,7 @@ export const LISTINGS: Listing[] = [
     openHouse: "Sun 1–3 PM",
     petFriendly: false,
     images: ["/images/downtown-property/downtown.jpg", "/images/downtown-property/downtown-2.jpg", "/images/downtown-property/downtown-3.jpg", "/images/downtown-property/downtown-4.jpg"],
+    type: "apartment",
     mls: "E4390002"
   },
   {
@@ -62,6 +64,7 @@ export const LISTINGS: Listing[] = [
     description: `Discover this charming family home in Aspen Gardens, Edmonton! Priced at $575,000, this spacious 1,900 sqft residence features 4 bedrooms and 3 bathrooms, making it perfect for growing families. Enjoy the convenience of nearby top-rated schools and a welcoming neighborhood. Your ideal home awaits at 4123 122 St NW!`,
     features: ["Large yard", "Finished basement", "Quiet street"],
     images: ["/images/aspen.jpg"],
+    type: "house",
     mls: "E4390003"
   },
   {
@@ -90,6 +93,7 @@ export const LISTINGS: Listing[] = [
     neighbourhood: "Downtown",
     features: ["Open concept", "Stainless steel appliances", "Walking distance to shops"],
     images: ["/images/downtowners.jpg"],
+    type: "apartment",
     mls: "E4390005"
   }
 ];

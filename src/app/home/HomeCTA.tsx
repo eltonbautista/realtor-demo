@@ -128,7 +128,7 @@ export default function HomeCTA() {
             <span className="hidden sm:inline text-gray-500">|</span>
             <span className="flex items-center gap-2">
               <MapPin className="w-4 h-4" />
-              Edmonton, Canada
+              Alberta, Canada
             </span>
           </div>
         </div>

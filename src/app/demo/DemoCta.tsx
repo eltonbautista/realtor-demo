@@ -1,14 +1,18 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function HomeCta() {
   return (
     <div className="px-6 md:pt-16">
       <section className="relative bg-white pt-16 pb-6 md:py-16 px-4 sm:px-8 md:px-10 rounded-3xl shadow-xl max-w-4xl mx-auto mb-0 mt-40 md:mt-16 md:mb-6 border border-[#e6eaf1]">
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 flex flex-col items-center w-full">
-          <img
+          <Image
             src="/images/sarahli-2.jpg"
             alt="Sarah Li"
+            width={160}
+            height={160}
             className="w-32 h-32 md:w-40 md:h-40 rounded-full shadow-lg object-cover bg-gray-100 border-4 border-white"
+            priority
           />
           <span className="font-serif text-2xl font-light text-[#3a4251] mt-6">Sarah Li, REALTOR®</span>
         </div>
