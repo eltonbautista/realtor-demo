@@ -18,7 +18,7 @@ export default function DemoPage() {
           My goal is to make the process simple, transparent, and tailored to your needs."
       />
       {/* Information Section */}
-      <RevealOnScroll>
+      <RevealOnScroll className="bg-white" >
         <DemoInformation />
       </RevealOnScroll>
 

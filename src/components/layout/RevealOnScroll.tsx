@@ -7,16 +7,19 @@ import React from "react";
 type RevealOnScrollProps = {
     children: React.ReactNode;
     delay?: number;
+    className?: string;
 };
 
 export default function RevealOnScroll({
     children,
     delay = 0,
+    className = "",
 }: RevealOnScrollProps) {
     const { ref, isInView } = useInView();
 
     return (
         <motion.div
+            className={className}
             ref={ref}
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : undefined}
