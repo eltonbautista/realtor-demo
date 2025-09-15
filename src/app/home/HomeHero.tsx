@@ -17,7 +17,7 @@ export default function HomeHero() {
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-start">
           <div className="mb-2">
             <Typewriter
-              className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white mb-0 heading-font"
+              className="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight text-white mb-0 heading-font"
               typingSpeed={30}
               lineDelay={200}
               lines={[

@@ -90,15 +90,15 @@ export default function HomeCTA() {
           )}
 
           {/* --- Your CTA Content --- */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight heading-font">
-            Ready to turn your website into your
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight heading-font">
+            Turn Every Website Visitor <br/> Into a
             <br />
             <span className="bg-gradient-to-r from-blue-500 to-white bg-clip-text text-transparent">
-              best lead generator?
+              Potential Client
             </span>
           </h2>
-          <p className="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">
-            Stop losing potential clients to competitors with better websites. Let&apos;s build you an AI-powered site that works around the clock to grow your business.
+          <p className="text-white text-lg mb-10 max-w-2xl mx-auto">
+            Get the professional website system that builds instant credibility, showcases your expertise, and converts browsers into your next commission check.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 w-full">
             <a

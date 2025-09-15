@@ -49,8 +49,8 @@ export default function HomeTestimonials() {
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <RevealOnScroll>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 text-white">
-            The Numbers Don&apos;t Lie:{" "}
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-12 text-white">
+            The Numbers Don&apos;t Lie:{" "} <br/>
             <span className="bg-gradient-to-r from-blue-500 to-white bg-clip-text text-transparent">
               Online Presence Matters
             </span>

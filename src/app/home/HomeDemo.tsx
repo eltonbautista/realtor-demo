@@ -8,7 +8,7 @@ export default function HomeDemo() {
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
             {/* Left: Text & Features */}
             <div className="flex-1 w-full max-w-xl">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 text-white">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 text-white">
                 See It In Action:{" "}
                 <span className="bg-gradient-to-r from-blue-500 to-white bg-clip-text text-transparent">
                   Live Demo

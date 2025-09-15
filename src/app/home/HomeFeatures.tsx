@@ -57,8 +57,8 @@ export default function CoreFeatures() {
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <RevealOnScroll>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-white heading-font">
-            Core Features That{" "}
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-4 text-white heading-font">
+            Core Features That{" "} <br/>
             <span className="bg-gradient-to-r from-blue-500 to-white bg-clip-text text-transparent">
               Drive Results
             </span>

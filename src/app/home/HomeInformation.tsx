@@ -6,7 +6,7 @@ export default function HomeInformation() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-12">
         {/* Left: Text */}
         <div className="flex-1 max-w-2xl">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-8">
             Who We&nbsp;
             <span className="bg-gradient-to-r from-blue-500 to-white bg-clip-text text-transparent">
               Are
