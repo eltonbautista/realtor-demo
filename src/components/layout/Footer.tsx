@@ -3,6 +3,7 @@
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -13,9 +14,9 @@ export default function Footer() {
           <div className="md:w-[40%] w-full border-r border-[#4a7c6a] p-6 flex flex-col gap-3">
             <h3 className="uppercase text-lg font-bold mb-2 tracking-wide heading-font">INNOVATE</h3>
             <ul className="space-y-1 text-sm">
-              <li><a href="/" className="hover:underline text-base">Home</a></li>
-              <li><a href="/demo" className="hover:underline text-base">Demo</a></li>
-              <li><a href="/internal" className="hover:underline text-base">Description Generator</a></li>
+              <li><Link href="/" className="hover:underline text-base">Home</Link></li>
+              <li><Link href="/demo" className="hover:underline text-base">Demo</Link></li>
+              <li><Link href="/internal" className="hover:underline text-base">Description Generator</Link></li>
             </ul>
             {/* <h3 className="uppercase text-base font-bold mt-6 mb-2 tracking-wide">Services</h3>
             <ul className="space-y-1 text-sm">
