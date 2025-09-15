@@ -38,9 +38,7 @@ export default function DemoPage() {
       {/* FAQs Section */}
 
       {/* Contact Section */}
-      <RevealOnScroll>
-        <DemoContact />
-      </RevealOnScroll>
+      <DemoContact />
 
       {/* Floating Chat Widget */}
       <div className="fixed bottom-6 right-6 z-50">

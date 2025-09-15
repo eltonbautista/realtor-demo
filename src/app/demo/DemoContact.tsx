@@ -17,7 +17,7 @@ export default function DemoContact() {
       {!open && (
         <div className="absolute inset-0 bg-black/60 z-0" />
       )}
-      <div className={`relative z-10 flex flex-col items-center justify-center w-full transition-all duration-700 ${open ? 'bg-white min-h-[80vh] py-12' : 'min-h-[80vh]'}`} style={{ maxWidth: open ? 1200 : '100%' }}>
+      <div className={`relative z-10 flex flex-col items-center justify-center w-full transition-all duration-700 ${open ? 'bg-white min-h-[80vh] py-12' : 'min-h-[80vh]'}`} style={{ maxWidth: open ? 1280 : '100%' }}>
         {!open ? (
           <div className="flex flex-col items-center justify-center w-full px-4">
             <h2 className="text-white text-4xl md:text-5xl leading-tight mb-6 text-center font-serif" style={{ letterSpacing: 2 }}>Work With Me</h2>

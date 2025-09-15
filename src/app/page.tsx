@@ -14,8 +14,15 @@ export default function Home() {
       {/* <HomeFlex /> */}
       <HomeTestimonials />
       <HomeDemo />
-      <HomeFeatures />
-      <HomeProblemSolving />
+      {/* Sticky scroll effect for features/problem solving */}
+      <div className="relative bg-[#020817]">
+        <div className="sticky top-50 z-10">
+          <HomeFeatures />
+        </div>
+        <div className="sticky top-0 z-20">
+          <HomeProblemSolving />
+        </div>
+      </div>
       <HomeInformation />
       <HomeCTA />
     </main>
