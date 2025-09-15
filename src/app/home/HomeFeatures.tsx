@@ -8,12 +8,12 @@ const features = [
   {
     icon: <Bot className="w-8 h-8 text-blue-500" />,
     title: "AI Lead Qualification",
-    desc: "Instantly filters serious buyers and sellers, saving you hours of unqualified calls",
+    desc: "Filters serious buyers & sellers instantly.",
   },
   {
     icon: <Mail className="w-8 h-8 text-blue-500" />,
     title: "Automated Follow-Ups",
-    desc: "Never miss a lead with intelligent email and SMS sequences that nurture prospects",
+    desc: "Never miss a lead with intelligent email and SMS sequences that nurture prospects.",
   },
   {
     icon: <Smartphone className="w-8 h-8 text-blue-500" />,

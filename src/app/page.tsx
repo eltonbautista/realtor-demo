@@ -1,4 +1,5 @@
 import HomeHero from '@/app/home/HomeHero'
+import HomeFlex from '@/app/home/HomeFlex'
 import HomeProblemSolving from '@/app/home/HomeProblemSolving'
 import HomeFeatures from '@/app/home/HomeFeatures'
 import HomeDemo from '@/app/home/HomeDemo'
@@ -10,10 +11,11 @@ export default function Home() {
   return (
     <main className="relative">
       <HomeHero />
-      <HomeProblemSolving />
-      <HomeFeatures />
-      <HomeDemo />
+      {/* <HomeFlex /> */}
       <HomeTestimonials />
+      <HomeDemo />
+      <HomeFeatures />
+      <HomeProblemSolving />
       <HomeInformation />
       <HomeCTA />
     </main>

@@ -7,29 +7,29 @@ export default function HomeInformation() {
         {/* Left: Text */}
         <div className="flex-1 max-w-2xl">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
-            Hi, I&apos;m{" "}
+            Who We&nbsp;
             <span className="bg-gradient-to-r from-blue-500 to-white bg-clip-text text-transparent">
-              Elton
+              Are
             </span>
           </h2>
           <p className="text-white text-xl mb-6">
-            I&apos;m a website developer based in Edmonton. After years in web development, I saw realtors struggling with outdated sites that don&apos;t generate leads.
+            At RealtorSitesPro, we help Canadian real estate professionals grow with high-performing websites. Too many realtor sites look nice but fail to generate leads — we fix that.
           </p>
           <p className="text-gray-300 text-lg mb-8">
-            RealtorSitesPro was built to fix that. I combine modern web technology with AI automation to create websites that actually work for real estate professionals—not just look pretty.
+            With proven expertise in modern web technology and AI automation, our mission is simple: build realtor websites that don&apos;t just look good, but actively bring in clients.
           </p>
           <ul className="space-y-3">
             <li className="flex items-start gap-2">
               <span className="mt-2 w-2 h-2 rounded-full bg-blue-400 inline-block" />
-              <span className="text-blue-100 text-base sm:text-lg">5+ years in web development</span>
+              <span className="text-blue-100 text-base sm:text-lg">5+ years in real estate web development</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-2 w-2 h-2 rounded-full bg-blue-400 inline-block" />
-              <span className="text-blue-100 text-base sm:text-lg">Specializing in AI integrations</span>
+              <span className="text-blue-100 text-base sm:text-lg">AI-powered lead generation systems</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-2 w-2 h-2 rounded-full bg-blue-400 inline-block" />
-              <span className="text-blue-100 text-base sm:text-lg">Based in Edmonton, serving Canada</span>
+              <span className="text-blue-100 text-base sm:text-lg">Serving Canada&apos;s real estate professionals</span>
             </li>
           </ul>
         </div>

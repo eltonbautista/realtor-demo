@@ -3,7 +3,7 @@ import RevealOnScroll from "@/components/layout/RevealOnScroll";
 
 export default function HomeDemo() {
   return (
-    <section className="w-full bg-[#020817] py-12 md:py-16 px-6">
+    <section className="w-full bg-[#020817] py-12 md:py-16 px-6" id="demo">
       <RevealOnScroll>
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
             {/* Left: Text & Features */}

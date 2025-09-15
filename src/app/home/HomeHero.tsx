@@ -2,6 +2,9 @@
 import { motion } from "framer-motion";
 import { Play, Calendar } from "lucide-react";
 import Typewriter from '@/components/layout/Typewriter';
+import Image from "next/image";
+// ...existing imports...
+import clsx from "clsx"; // Optional: for conditional classNames
 
 export default function HomeHero() {
   return (
@@ -18,22 +21,17 @@ export default function HomeHero() {
               typingSpeed={30}
               lineDelay={200}
               lines={[
-                "AI-Powered Websites",
-                "for Realtors That",
-                "Capture More",
-                "Leads,",
+                "Leads In.",
+                "Deals Closed.",
               ]}
             />
             <motion.div
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 2.5 }}
+              transition={{ duration: 0.8, delay: 1 }}
             >
-              <span
-                className="relative px-1"
-                style={{ display: "inline-block" }}
-              >
-                <span className="relative z-10 font-extrabold bg-gradient-to-r from-white via-pink-500 to-blue-500 bg-clip-text text-transparent animate-gradient-move text-4xl sm:text-5xl md:text-6xl">
+              <span className="relative px-1" style={{ display: "inline-block" }}>
+                <span className="relative z-10 font-extrabold bg-gradient-to-r from-white via-pink-500 to-blue-500 bg-clip-text text-transparent animate-gradient-move text-4xl sm:text-5xl md:text-6xl drop-shadow-[0_0_16px_rgba(0,176,255,0.7)]">
                   Automatically.
                 </span>
                 <span
@@ -47,40 +45,56 @@ export default function HomeHero() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 3 }}
+            transition={{ duration: 0.8, delay: 1.5 }}
           >
             <p className="bg-gradient-to-r from-white to-blue-500 bg-clip-text text-transparent text-base sm:text-lg mb-8 max-w-md font-semibold">
-              Let your experience and expertise shine through a website that tells your professional story effectively.
+              Stop chasing. Start closing. <br/>Capture leads effortlessly, build trust instantly, and close more deals with a smarter website.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#demo"
                 className="flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-500 hover:bg-blue-700 text-white font-semibold shadow transition text-base"
               >
-                <Play className="w-5 h-5" /> See Demo
+                <Play className="w-5 h-5" /> See It in Action
               </a>
               <a
                 href="#book"
                 className="flex items-center gap-2 px-6 py-3 rounded-lg bg-black/80 hover:bg-black text-white font-semibold shadow transition text-base border border-gray-700"
               >
-                <Calendar className="w-5 h-5" /> Book Free Call
+                <Calendar className="w-5 h-5" /> Get My Free Consultation
               </a>
             </div>
+            <h2 className="bg-gradient-to-r text-white bg-clip-text text-transparent text-base sm:text-lg mb-8 max-w-md font-semibold italic mt-4">
+              Built by real estate web specialists. Designed to convert — not just look pretty.
+            </h2>
           </motion.div>
         </div>
 
-        {/* Right: Demo Cards */}
+        {/* Right: Floating Demo Cards */}
         <div className="w-full lg:w-1/2 flex justify-center items-center mt-16 lg:mt-0 relative">
           {/* Main Card */}
           <div className="relative">
-            <div className="w-[340px] h-[220px] sm:w-[400px] sm:h-[260px] bg-white/5 rounded-2xl shadow-2xl flex flex-col items-center justify-center backdrop-blur-md border border-white/10">
-              <span className="text-3xl mb-2">🏡</span>
-              <span className="text-white/80 text-base">Interactive Realtor Website Demo</span>
+            {/* Main Card */}
+            <div className="w-[480px] h-[300px] sm:w-[540px] sm:h-[340px] bg-white/5 rounded-2xl shadow-2xl flex items-center justify-center overflow-hidden border border-white/10 backdrop-blur-md relative">
+              <Image
+                src="/images/home-ss.png"
+                alt="Realtor Website Desktop Demo"
+                fill
+                className="object-cover rounded-2xl"
+                priority
+                sizes="(max-width: 540px) 480px, 540px"
+              />
             </div>
             {/* Overlapping Mobile Card */}
-            <div className="absolute right-[-60px] top-10 w-[140px] h-[220px] sm:w-[170px] sm:h-[260px] bg-white/5 rounded-2xl shadow-xl flex flex-col items-center justify-center backdrop-blur-md border border-white/10">
-              <span className="text-2xl mb-2">🇺🇸</span>
-              <span className="text-white/80 text-xs text-center">Mobile Ready</span>
+            <div className="absolute right-[-60px] top-20 w-[160px] h-[260px] sm:w-[200px] sm:h-[320px] bg-white/10 rounded-2xl shadow-xl flex items-center justify-center overflow-hidden border border-white/10 backdrop-blur-md z-10">
+              <Image
+                src="/images/home-ss-m.png"
+                alt="Realtor Website Mobile Demo"
+                fill
+                className="object-cover rounded-2xl"
+                priority
+                sizes="(max-width: 200px) 160px, 200px"
+              />
             </div>
           </div>
         </div>
@@ -97,31 +111,6 @@ export default function HomeHero() {
           animation: gradient-move 3s ease-in-out infinite;
         }
       `}</style>
-      <style jsx global>{`
-  @keyframes gradient-move {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  .animate-gradient-move {
-    background-size: 200% 200%;
-    animation: gradient-move 3s ease-in-out infinite;
-  }
-  /* Static noise effect */
-  .static-noise {
-    width: 100%;
-    height: 100%;
-    background: url("data:image/svg+xml;utf8,<svg width='40' height='40' xmlns='http://www.w3.org/2000/svg'><filter id='noiseFilter'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23noiseFilter)'/></svg>");
-    opacity: 0.7;
-    animation: static-flicker 0.15s steps(2) infinite;
-    border-radius: 0.375rem;
-  }
-  @keyframes static-flicker {
-    0% { opacity: 0.7; }
-    50% { opacity: 1; }
-    100% { opacity: 0.7; }
-  }
-`}</style>
     </section>
   );
 }
