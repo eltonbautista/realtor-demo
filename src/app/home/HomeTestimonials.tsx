@@ -51,7 +51,7 @@ export default function HomeTestimonials() {
         <RevealOnScroll>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-12 text-white">
             The Numbers Don&apos;t Lie:{" "} <br/>
-            <span className="bg-gradient-to-r from-blue-500 to-white bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-800 to-white bg-clip-text text-transparent">
               Online Presence Matters
             </span>
           </h2>
@@ -71,7 +71,7 @@ export default function HomeTestimonials() {
               animate={controls}
               custom={i}
             >
-              <div className="text-5xl font-bold bg-gradient-to-r from-blue-500 to-white bg-clip-text text-transparent mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-blue-800 to-white bg-clip-text text-transparent mb-2">
                 {stat.value}
               </div>
               <div className="text-gray-300 text-lg">{stat.desc}</div>

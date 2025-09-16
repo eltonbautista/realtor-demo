@@ -45,13 +45,17 @@ export default function HomeProblemSolving() {
   };
 
   return (
-    <section className="w-full bg-[#020817] py-12 md:py-16 px-6 md:px-0">
+    <section className="w-full py-12 md:py-16 px-6 md:px-0"
+      style={{
+        backgroundImage: "linear-gradient(170deg, #020817 40%, white 50%)"
+      }}
+    >
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <RevealOnScroll>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-12 text-white">
             Most Realtor Websites Are Just{" "} <br/>
-            <span className="bg-gradient-to-r from-blue-500 to-white bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-800 to-white bg-clip-text text-transparent">
               Online Business Cards
             </span>
           </h2>
@@ -84,7 +88,7 @@ export default function HomeProblemSolving() {
           custom={3}
         >
           <div className="bg-[#232736] rounded-xl px-8 py-8 max-w-2xl w-full text-center mx-auto shadow-lg">
-            <div className="text-xl font-bold bg-gradient-to-r from-blue-500 to-white bg-clip-text text-transparent mb-2 heading-font">
+            <div className="text-xl font-bold bg-gradient-to-r from-blue-800 to-white bg-clip-text text-transparent mb-2 heading-font">
               We build sites that don&apos;t just look good—they work for you 24/7
             </div>
             <div className="text-white">

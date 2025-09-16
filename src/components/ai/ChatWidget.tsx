@@ -71,7 +71,7 @@ export default function ChatWidget({ listingId }: Props) {
           className="fixed right-4 bottom-4 flex items-center gap-3 px-5 py-4 rounded-2xl bg-white border border-blue-400 text-blue-700 shadow-xl hover:bg-blue-50 transition-all z-50 cursor-pointer"
           whileTap={{ scale: 0.97 }}
         >
-          <Bot className="w-6 h-6 text-blue-500" />
+          <Bot className="w-6 h-6 text-blue-800" />
           <div className="flex flex-col items-start">
             <span className="font-semibold text-base leading-tight">Sarah&apos;s AI Assistant</span>
             <span className="text-xs text-blue-300 font-medium mt-0.5">Usually replies instantly</span>
@@ -92,7 +92,7 @@ export default function ChatWidget({ listingId }: Props) {
             {/* Header */}
             <div className="flex items-center justify-between px-4 py-3 border-b border-blue-100 bg-white">
               <div className="flex items-center gap-2">
-                <Bot className="w-5 h-5 text-blue-500" />
+                <Bot className="w-5 h-5 text-blue-800" />
                 <div>
                   <span className="font-semibold text-base text-gray-700">Sarah&apos;s AI Assistant</span>
                   <div className="text-xs text-blue-300 font-medium leading-tight">Usually replies instantly</div>
@@ -104,7 +104,7 @@ export default function ChatWidget({ listingId }: Props) {
                   onClick={() => setOpen(false)}
                   aria-label="Close"
                 >
-                  <X className="w-5 h-5 text-blue-500" />
+                  <X className="w-5 h-5 text-blue-800" />
                 </button>
               </div>
             </div>
@@ -118,7 +118,7 @@ export default function ChatWidget({ listingId }: Props) {
                   animate={{ opacity: 1, y: 0 }}
                   className={`px-4 py-2 rounded-2xl text-sm shadow-sm max-w-[80%] ${
                     m.role === "user"
-                      ? "self-end bg-blue-500 text-white"
+                      ? "self-end bg-blue-800 text-white"
                       : "self-start bg-gray-100 text-gray-800"
                   }`}
                 >
@@ -156,12 +156,12 @@ export default function ChatWidget({ listingId }: Props) {
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && send()}
                 placeholder="Ask about properties, neighborhoods, or schedule a showing..."
-                className="flex-1 border border-gray-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-1 border border-gray-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-800"
               />
               <button
                 onClick={send}
                 disabled={loading}
-                className="p-2 rounded-full bg-blue-500 text-white hover:bg-blue-600 disabled:opacity-50 flex items-center justify-center"
+                className="p-2 rounded-full bg-blue-800 text-white hover:bg-blue-600 disabled:opacity-50 flex items-center justify-center"
               >
                 <Send className="w-4 h-4" />
               </button>

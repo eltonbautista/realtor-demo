@@ -10,7 +10,7 @@ export default function HomeDemo() {
             <div className="flex-1 w-full max-w-xl">
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 text-white">
                 See It In Action:{" "}
-                <span className="bg-gradient-to-r from-blue-500 to-white bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-blue-800 to-white bg-clip-text text-transparent">
                   Live Demo
                 </span>
               </h2>
@@ -52,12 +52,12 @@ export default function HomeDemo() {
               <div className="relative bg-[#181d29] rounded-2xl shadow-xl px-8 py-12 w-full max-w-md flex flex-col items-center text-center border border-[#232736]">
                 {/* Live Demo badge */}
                 <div className="absolute top-6 right-6">
-                  <span className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-blue-500 text-white text-sm font-semibold shadow">
+                  <span className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-blue-800 text-white text-sm font-semibold shadow">
                     <span className="w-2 h-2 rounded-full bg-green-300 inline-block" />
                     Live Demo
                   </span>
                 </div>
-                <Rocket className="w-12 h-12 text-blue-500 mb-6" />
+                <Rocket className="w-12 h-12 text-blue-800 mb-6" />
                 <div className="text-xl font-semibold text-white mb-2">
                   Interactive Demo Site
                 </div>

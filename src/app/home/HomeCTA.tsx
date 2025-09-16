@@ -39,7 +39,7 @@ export default function HomeCTA() {
   }
 
   return (
-    <section className="w-full bg-[#020817] py-16 px-6">
+    <section className="w-full bg-white py-16 px-6">
       <RevealOnScroll>
         <div
           ref={cardRef}
@@ -93,7 +93,7 @@ export default function HomeCTA() {
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight heading-font">
             Turn Every Website Visitor <br/> Into a
             <br />
-            <span className="bg-gradient-to-r from-blue-500 to-white bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-800 to-white bg-clip-text text-transparent">
               Potential Client
             </span>
           </h2>

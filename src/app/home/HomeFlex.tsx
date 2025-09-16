@@ -27,7 +27,7 @@ export default function ScrollingTechStack() {
   return (
     <div className="overflow-hidden py-6 bg-[#020817]">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 text-white uppercase">
-        <span className="bg-gradient-to-r from-blue-500 to-white bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-blue-800 to-white bg-clip-text text-transparent">
           Powered by industry-leading technologies
         </span>
       </h2>

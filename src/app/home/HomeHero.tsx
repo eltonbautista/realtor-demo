@@ -34,12 +34,12 @@ export default function HomeHero() {
               transition={{ duration: 0.8, delay: animDelay }}
             >
               <span className="relative px-1" style={{ display: "inline-block" }}>
-                <span className="relative z-10 font-extrabold bg-gradient-to-r from-white via-pink-500 to-blue-500 bg-clip-text text-transparent animate-gradient-move text-5xl sm:text-6xl md:text-7xl drop-shadow-[0_0_16px_rgba(0,176,255,0.7)]">
+                <span className="relative z-10 font-extrabold bg-gradient-to-r from-white via-pink-500 to-blue-800 bg-clip-text text-transparent animate-gradient-move text-5xl sm:text-6xl md:text-7xl drop-shadow-[0_0_16px_rgba(0,176,255,0.7)]">
                   Automatically.
                 </span>
                 <span
                   aria-hidden
-                  className="absolute inset-0 rounded-md blur-lg opacity-60 bg-gradient-to-r from-white via-pink-500 to-blue-500"
+                  className="absolute inset-0 rounded-md blur-lg opacity-60 bg-gradient-to-r from-white via-pink-500 to-blue-800"
                   style={{ zIndex: 0 }}
                 />
               </span>
@@ -50,13 +50,13 @@ export default function HomeHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: animDelay + 0.5 }}
           >
-            <p className="bg-gradient-to-r from-white to-blue-500 bg-clip-text text-transparent text-base sm:text-lg my-6 max-w-md font-semibold">
+            <p className="bg-gradient-to-r from-white to-blue-800 bg-clip-text text-transparent text-base sm:text-lg my-6 max-w-md font-semibold">
               Stop chasing. Start closing. <br/>Capture leads effortlessly, build trust instantly, and close more deals with a smarter website.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#demo"
-                className="flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-500 hover:bg-blue-700 text-white font-semibold shadow transition text-base"
+                className="flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-800 hover:bg-blue-700 text-white font-semibold shadow transition text-base"
               >
                 <Play className="w-5 h-5" /> See It in Action
               </a>

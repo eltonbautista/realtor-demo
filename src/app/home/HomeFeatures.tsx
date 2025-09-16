@@ -6,22 +6,22 @@ import RevealOnScroll from "@/components/layout/RevealOnScroll";
 
 const features = [
   {
-    icon: <Bot className="w-8 h-8 text-blue-500" />,
+    icon: <Bot className="w-8 h-8 text-blue-800" />,
     title: "AI Lead Qualification",
     desc: "Filters serious buyers & sellers instantly.",
   },
   {
-    icon: <Mail className="w-8 h-8 text-blue-500" />,
+    icon: <Mail className="w-8 h-8 text-blue-800" />,
     title: "Automated Follow-Ups",
     desc: "Never miss a lead with intelligent email and SMS sequences that nurture prospects.",
   },
   {
-    icon: <Smartphone className="w-8 h-8 text-blue-500" />,
+    icon: <Smartphone className="w-8 h-8 text-blue-800" />,
     title: "Mobile-Optimized Design",
     desc: "Perfect experience on any device where your clients are searching",
   },
   {
-    icon: <Home className="w-8 h-8 text-blue-500" />,
+    icon: <Home className="w-8 h-8 text-blue-800" />,
     title: "MLS Integration",
     desc: "Automatically sync your listings and keep your site fresh with new properties",
   },
@@ -59,7 +59,7 @@ export default function CoreFeatures() {
         <RevealOnScroll>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-4 text-white heading-font">
             Core Features That{" "} <br/>
-            <span className="bg-gradient-to-r from-blue-500 to-white bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-800 to-white bg-clip-text text-transparent">
               Drive Results
             </span>
           </h2>
