@@ -30,7 +30,7 @@ export default function Footer() {
           {/* Center: Subscribe */}
           <div className="md:w-[40%] w-full border-r border-[#4a7c6a] p-6 flex flex-col gap-3">
             <h3 className="uppercase text-lg font-bold mb-2 tracking-wide heading-font">RealtorSitesPro</h3>
-            <p className="text-base mb-2">Intelligent Websites Pay for Themselves</p>
+            <p className="text-base mb-2">Intelligent Websites That Pay for Themselves</p>
             {/* <form className="flex w-full mb-2">
               <input
                 type="email"
