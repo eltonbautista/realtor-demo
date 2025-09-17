@@ -23,10 +23,10 @@ export default function DemoContact() {
           <div className="flex flex-col items-center justify-center w-full px-4">
             <h2 className="text-white text-4xl md:text-5xl leading-tight mb-6 text-center font-serif" style={{ letterSpacing: 2 }}>Work With Me</h2>
             <p className="text-white text-lg md:text-xl font-light mb-8 max-w-2xl text-center">
-              Trusted by Edmonton's most discerning clients, Sarah Li maintains one of the city's most impressive luxury condominium portfolios.
+              Trusted by Edmonton&apos;s most discerning clients, Sarah Li maintains one of the city&apos;s most impressive luxury condominium portfolios.
               <br/>
               <br/>
-              Discover why she's Edmonton's preferred real estate expert — schedule your complimentary consultation for buying, selling, or investing today.
+              Discover why she&apos;s Edmonton&apos;s preferred real estate expert — schedule your complimentary consultation for buying, selling, or investing today.
             </p>
               <Button
                 size="lg"
