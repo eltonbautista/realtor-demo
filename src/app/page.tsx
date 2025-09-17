@@ -1,5 +1,6 @@
 import HomeHero from '@/app/home/HomeHero'
 import HomeFlex from '@/app/home/HomeFlex'
+import HomeGrowthSystem from '@/app/home/HomeGrowthSystem'
 import HomeProblemSolving from '@/app/home/HomeProblemSolving'
 import HomeFeatures from '@/app/home/HomeFeatures'
 import HomeDemo from '@/app/home/HomeDemo'
@@ -11,7 +12,8 @@ export default function Home() {
   return (
     <main className="relative">
       <HomeHero />
-      {/* <HomeFlex /> */}
+      <HomeFlex />
+      {/* <HomeGrowthSystem /> */}
       <HomeTestimonials />
       <HomeDemo />
       {/* Sticky scroll effect for features/problem solving */}

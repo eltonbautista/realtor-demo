@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 export default function DemoAgent() {
   return (
@@ -27,12 +28,12 @@ export default function DemoAgent() {
             Sarah curates exclusive opportunities for high-net-worth clients, developers, and strategic investors.
             Her remarkable ascent to the upper echelon of Edmonton&apos;s real estate professionals is built upon her sterling reputation for discretion, sophisticated market insight, and unwavering commitment to exceptional results.
           </p>
-          <button
-            className="px-8 py-3 border border-gray-900 text-gray-900 font-medium rounded-none hover:bg-gray-900 hover:text-white transition-colors text-base tracking-wide"
-            type="button"
+          <Button
+            size="lg"
+            className="px-8 py-3 border border-gray-900 text-gray-900 font-medium rounded-none hover:bg-gray-900 hover:text-white transition-colors text-base tracking-wide uppercase bg-white"
           >
-            LEARN MORE
-          </button>
+            Learn More
+          </Button>
         </div>
         {/* Image Content */}
         <div className="flex-1 flex items-center justify-center relative w-full md:w-auto">

@@ -22,13 +22,13 @@ export default function DemoPage() {
         <DemoInformation />
       </RevealOnScroll>
 
-      {/* Listings Section */}
-      <FeaturedListings LISTINGS={LISTINGS} />
-
       {/* CTA Strip */}
       <RevealOnScroll>
         <DemoCta />
       </RevealOnScroll>
+
+      {/* Listings Section */}
+      <FeaturedListings LISTINGS={LISTINGS} />
 
       {/* Testimonials Section */}
       <RevealOnScroll>

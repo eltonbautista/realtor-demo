@@ -46,6 +46,56 @@ export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) 
       <p className="text-lg text-[#8b98ad] text-left mb-10 max-w-2xl">
         Discover exceptional properties in Santa Barbara&apos;s most desirable neighborhoods.
       </p>
+      {/* Card Buttons Section */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 w-full">
+        {[
+          {
+            label: "Starter Homes",
+            img: "/images/home-ss.png",
+            subtitle: "Affordable entry-level properties"
+          },
+          {
+            label: "Luxury Condos",
+            img: "/images/downtowners.jpg",
+            subtitle: "Premium amenities & city views"
+          },
+          {
+            label: "Family Friendly",
+            img: "/images/strathcona.jpg",
+            subtitle: "Spacious homes near schools"
+          }
+        ].map((card, idx) => (
+          <button
+            key={card.label}
+            className="relative flex flex-col justify-end h-40 md:h-48 w-full overflow-hidden shadow-lg border border-[#e6eaf1] transition group focus:outline-none focus:ring-4 focus:ring-blue-300 cursor-pointer hover:scale-105"
+            style={{ borderRadius: 0 }}
+            tabIndex={0}
+            aria-label={card.label}
+          >
+            {/* Blurred Image Background */}
+            <Image
+              src={card.img}
+              alt={card.label}
+              fill
+              className="absolute inset-0 w-full h-full object-cover object-center z-0"
+              style={{ filter: 'blur(8px)', zIndex: 1, borderRadius: 0 }}
+              sizes="(max-width: 768px) 100vw, 33vw"
+              priority={idx === 0}
+            />
+            {/* Overlay for darkening */}
+            <div className="absolute inset-0 bg-black/30 z-10" style={{ borderRadius: 0 }} />
+            {/* Card Text */}
+            <div className="relative z-20 p-6 flex flex-col gap-1 w-full">
+              <span className="font-serif text-2xl md:text-3xl text-white drop-shadow font-light mb-1 text-left">
+                {card.label}
+              </span>
+              <span className="text-white text-base md:text-lg font-light drop-shadow text-left">
+                {card.subtitle}
+              </span>
+            </div>
+          </button>
+        ))}
+      </div>
       <div
         className="
           grid gap-4
@@ -149,8 +199,8 @@ export default function FeaturedListings({ LISTINGS }: { LISTINGS: Listing[] }) 
       {LISTINGS.length > 4 && (
         <div className="flex justify-center mt-10">
           <Button
-            variant="outline"
-            className="border-[#e6eaf1] text-[#3a4251] font-semibold px-8 py-3 hover:bg-yellow-50 transition"
+            size="lg"
+            className="px-8 py-3 border border-gray-900 text-gray-900 font-medium rounded-none hover:bg-gray-900 hover:text-white transition-colors text-base tracking-wide uppercase bg-white"
             onClick={() => setShowAll((prev) => !prev)}
             aria-expanded={showAll}
             aria-controls="listings"

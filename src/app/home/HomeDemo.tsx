@@ -44,7 +44,7 @@ export default function HomeDemo() {
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg shadow transition"
               >
                 <ExternalLink className="w-5 h-5" />
-                Visit Live Demo
+                Book A Demo
               </a>
             </div>
             {/* Right: Demo Card */}

@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import LeadForm from "@/components/ai/LeadForm";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function DemoContact() {
   const [open, setOpen] = useState(false);
@@ -10,27 +11,30 @@ export default function DemoContact() {
   return (
     <section
       id="contact"
-      className="relative w-full min-h-[80vh] flex items-center justify-center overflow-hidden"
-      style={{ backgroundImage: open ? undefined : 'url(/images/demoinfo.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}
+      className="relative w-full min-h-[60vh] flex items-center justify-center overflow-hidden"
+      style={{ backgroundImage: open ? undefined : 'url(/images/ed-white.jpg)', backgroundSize: 'contain', backgroundPosition: 'center' }}
     >
-      {/* Overlay for darkening the image */}
+      {/* Overlay for darkening and blurring the image */}
       {!open && (
-        <div className="absolute inset-0 bg-black/60 z-0" />
+        <div className="absolute inset-0 bg-black/60 z-0" style={{ backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)' }} />
       )}
-      <div className={`relative z-10 flex flex-col items-center justify-center w-full transition-all duration-700 ${open ? 'bg-white min-h-[80vh] py-12' : 'min-h-[80vh]'}`} style={{ maxWidth: open ? 1280 : '100%' }}>
+      <div className={`relative z-10 flex flex-col items-center justify-center w-full transition-all duration-700 ${open ? 'bg-white min-h-[60vh] py-12' : 'min-h-[60vh]'}`} style={{ maxWidth: open ? 1280 : '100%' }}>
         {!open ? (
           <div className="flex flex-col items-center justify-center w-full px-4">
             <h2 className="text-white text-4xl md:text-5xl leading-tight mb-6 text-center font-serif" style={{ letterSpacing: 2 }}>Work With Me</h2>
             <p className="text-white text-lg md:text-xl font-light mb-8 max-w-2xl text-center">
-              Matthew has a reputation for consistently carrying one of the most impressive luxury listing platforms in the marketplace. Contact Matthew today for a free consultation for buying, selling, renting or investing in the Hamptons.
+              Trusted by Edmonton's most discerning clients, Sarah Li maintains one of the city's most impressive luxury condominium portfolios.
+              <br/>
+              <br/>
+              Discover why she's Edmonton's preferred real estate expert — schedule your complimentary consultation for buying, selling, or investing today.
             </p>
-            <button
-              className="uppercase cursor-pointer border border-white text-white px-10 py-3 leading-tight font-semibold bg-transparent transition hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white"
-              style={{ borderRadius: 0, fontSize: 18, letterSpacing: 2 }}
-              onClick={() => setOpen(true)}
-            >
-              Contact Us
-            </button>
+              <Button
+                size="lg"
+                className="px-8 py-3 border border-gray-900 text-gray-900 font-medium rounded-none hover:bg-gray-900 hover:text-white transition-colors text-base tracking-wide uppercase bg-white"
+                onClick={() => setOpen(true)}
+              >
+                Contact Us
+              </Button>
           </div>
         ) : (
           <div className="w-full flex flex-col md:flex-row gap-12 md:gap-20 border border-[#e6eaf1] bg-white" style={{ borderRadius: 0 }}>

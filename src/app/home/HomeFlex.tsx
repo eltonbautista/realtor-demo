@@ -9,12 +9,17 @@ const logos = [
   { icon: <FaNodeJs size={60} title="Node.js" color="#fff" />, name: "Node.js" },
   { icon: <SiZapier size={60} title="Zapier" color="#fff" />, name: "Zapier" },
   { icon: <SiOpenai size={60} title="OpenAI" color="#fff" />, name: "OpenAI" },
-  // GoHighLevel SVG (replace with your own SVG if you have it)
+  // GoHighLevel SVG: three upward arrows, left/right longer than middle
   {
     icon: (
-      <svg width="60" height="60" viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="24" fill="#FFD600"/>
-        <path d="M24 12L30 36H18L24 12Z" fill="#333"/>
+      <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+        <circle cx="30" cy="30" r="30" fill="#FFFFFF" />
+        {/* Left Arrow (long) */}
+        <path d="M16 40 L16 20 M16 20 L12 24 M16 20 L20 24" stroke="#333" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        {/* Middle Arrow (short) */}
+        <path d="M30 44 L30 28 M30 28 L26 32 M30 28 L34 32" stroke="#333" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        {/* Right Arrow (long) */}
+        <path d="M44 40 L44 20 M44 20 L40 24 M44 20 L48 24" stroke="#333" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     name: "GoHighLevel"
@@ -25,7 +30,7 @@ const logos = [
 
 export default function ScrollingTechStack() {
   return (
-    <div className="overflow-hidden py-6 bg-[#020817]">
+    <div className="overflow-hidden pb-6 md:pb-24 bg-[#020817]">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 text-white uppercase">
         <span className="bg-gradient-to-r from-blue-800 to-white bg-clip-text text-transparent">
           Powered by industry-leading technologies

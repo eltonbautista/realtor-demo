@@ -1,27 +1,27 @@
 "use client";
-import { Bot, Mail, Smartphone, Home } from "lucide-react";
+import { PremiumBotIcon, PremiumMailIcon, PremiumSmartphoneIcon, PremiumHomeIcon } from "@/components/ui/PremiumIcons";
 import { motion, useAnimation, useInView, Variants } from "framer-motion";
 import { useRef, useEffect } from "react";
 import RevealOnScroll from "@/components/layout/RevealOnScroll";
 
 const features = [
   {
-    icon: <Bot className="w-8 h-8 text-blue-800" />,
+    icon: <PremiumBotIcon />,
     title: "AI Lead Qualification",
     desc: "Filters serious buyers & sellers instantly.",
   },
   {
-    icon: <Mail className="w-8 h-8 text-blue-800" />,
+    icon: <PremiumMailIcon />,
     title: "Automated Follow-Ups",
     desc: "Never miss a lead with intelligent email and SMS sequences that nurture prospects.",
   },
   {
-    icon: <Smartphone className="w-8 h-8 text-blue-800" />,
+    icon: <PremiumSmartphoneIcon />,
     title: "Mobile-Optimized Design",
     desc: "Perfect experience on any device where your clients are searching",
   },
   {
-    icon: <Home className="w-8 h-8 text-blue-800" />,
+    icon: <PremiumHomeIcon />,
     title: "MLS Integration",
     desc: "Automatically sync your listings and keep your site fresh with new properties",
   },
@@ -79,7 +79,7 @@ export default function CoreFeatures() {
               animate={controls}
               custom={features.length - i}
             >
-              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-[#232746] mb-4 border border-blue-900">
+              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-[#232746] mb-4 border border-blue-400">
                 {f.icon}
               </div>
               <p className="font-bold text-white text-xl mb-2 heading-font">{f.title}</p>

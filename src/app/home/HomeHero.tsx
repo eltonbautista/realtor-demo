@@ -58,13 +58,13 @@ export default function HomeHero() {
                 href="#demo"
                 className="flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-800 hover:bg-blue-700 text-white font-semibold shadow transition text-base"
               >
-                <Play className="w-5 h-5" /> See It in Action
+                <Play className="w-5 h-5" /> See It Live
               </a>
               <a
-                href="#book"
+                href="mailto:solutions@realtorsitespro.ca"
                 className="flex items-center gap-2 px-6 py-3 rounded-lg bg-black/80 hover:bg-black text-white font-semibold shadow transition text-base border border-gray-700"
               >
-                <Calendar className="w-5 h-5" /> Get My Free Consultation
+                <Calendar className="w-5 h-5" /> Book A Demo
               </a>
             </div>
             {/* <h2 className="bg-gradient-to-r text-white bg-clip-text text-transparent text-base mb-8 max-w-md font-semibold italic mt-4">

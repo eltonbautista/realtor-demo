@@ -53,7 +53,7 @@ export default function HomeHero({
 
         <Button
           size="lg"
-          className="px-8 py-3 border border-gray-900 text-gray-900 font-medium rounded-none bg-white hover:bg- -900 hover:text-white transition-colors text-base tracking-wide"
+          className="px-8 py-3 border border-gray-900 text-gray-900 font-medium rounded-none hover:bg-gray-900 hover:text-white transition-colors text-base tracking-wide uppercase bg-white"
           onClick={() => scrollToSection("listings")}
         >
           View Our Properties

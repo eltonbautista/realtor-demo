@@ -1,9 +1,19 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
-export default function HomeCta() {
+export default function DemoCta() {
   return (
-    <div className="px-4 md:pt-16">
+    <div className="px-4 md:pt-16 relative">
+      {/* Blurred background image */}
+      <div className="absolute inset-0 w-full h-full -z-10 flex justify-center items-center">
+        <Image
+          src="/images/hero-img.jpg"
+          alt="Background"
+          fill
+          className="object-cover w-full h-full blur-xl brightness-75"
+          priority
+        />
+      </div>
       <section className="relative bg-gray-100 pt-20 pb-10 md:py-20 px-4 sm:px-8 md:px-12 max-w-3xl mx-auto mb-0 mt-36 md:mt-20 md:mb-8 border border-[#e6eaf1]">
         <div className="absolute -top-24 left-1/2 -translate-x-1/2 flex flex-col items-center w-full">
           <Image
@@ -26,19 +36,16 @@ export default function HomeCta() {
           <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
             <a href="mailto:sarah@example.com?subject=I'm%20interested%20in%20buying%20a%20house" className="w-full sm:w-auto">
               <Button
-                className="px-8 py-4 text-base font-semibold bg-yellow-100 hover:bg-yellow-200 text-[#232736] shadow-none border-none w-full sm:w-auto"
                 size="lg"
-                style={{ borderRadius: 0 }}
+                className="px-8 py-3 border border-gray-900 text-gray-900 font-medium rounded-none hover:bg-gray-900 hover:text-white transition-colors text-base tracking-wide uppercase bg-white w-full sm:w-auto"
               >
                 Buy a House
               </Button>
             </a>
             <a href="mailto:sarah@example.com?subject=I'm%20interested%20in%20selling%20my%20house" className="w-full sm:w-auto">
               <Button
-                className="px-8 py-4 text-base font-semibold bg-white hover:bg-yellow-50 text-[#232736] border border-[#e6eaf1] shadow-none w-full sm:w-auto"
                 size="lg"
-                style={{ borderRadius: 0 }}
-                variant="outline"
+                className="px-8 py-3 border border-gray-900 bg-gray-900 text-white font-medium rounded-none hover:bg-white hover:text-gray-900 transition-colors text-base tracking-wide uppercase w-full sm:w-auto"
               >
                 Sell a House
               </Button>

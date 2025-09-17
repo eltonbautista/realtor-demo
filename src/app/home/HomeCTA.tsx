@@ -106,7 +106,7 @@ export default function HomeCTA() {
               className="flex items-center justify-center gap-2 px-8 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg shadow transition w-full sm:w-auto"
             >
               <Play className="w-5 h-5" />
-              See Demo
+              See It Live
             </a>
             {/* <a
               href="/book"
@@ -116,7 +116,7 @@ export default function HomeCTA() {
               Book a Free Call
             </a> */}
           </div>
-          <div className="text-gray-400 text-base mb-2">Or get in touch directly:</div>
+          <div className="text-gray-400 text-base mb-2 text-white font-semibold">Book A Demo:</div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-blue-300 text-base">
             <a
               href="mailto:solutions@realtorsitespro.ca"

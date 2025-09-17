@@ -29,9 +29,9 @@ export default function Footer() {
 
           {/* Center: Subscribe */}
           <div className="md:w-[40%] w-full border-r border-[#4a7c6a] p-6 flex flex-col gap-3">
-            <h3 className="uppercase text-lg font-bold mb-2 tracking-wide heading-font">Subscribe</h3>
-            <p className="text-base mb-2">Join our newsletter to stay up to date on features and releases.</p>
-            <form className="flex w-full mb-2">
+            <h3 className="uppercase text-lg font-bold mb-2 tracking-wide heading-font">RealtorSitesPro</h3>
+            <p className="text-base mb-2">Intelligent Websites Pay for Themselves</p>
+            {/* <form className="flex w-full mb-2">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -45,8 +45,8 @@ export default function Footer() {
               >
                 Subscribe
               </Button>
-            </form>
-            <p className="text-xs text-white/80">By subscribing you agree to with our <a href="#" className="underline">Privacy Policy</a> and provide consent to receive updates from our company.</p>
+            </form> */}
+            {/* <p className="text-xs text-white/80">By subscribing you agree to with our <a href="#" className="underline">Privacy Policy</a> and provide consent to receive updates from our company.</p> */}
           </div>
 
           {/* Right: Social Links */}

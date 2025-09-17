@@ -71,7 +71,7 @@ export default function HomeTestimonials() {
               animate={controls}
               custom={i}
             >
-              <div className="text-5xl font-bold bg-gradient-to-r from-blue-800 to-white bg-clip-text text-transparent mb-2">
+              <div className="text-6xl font-black heading-font text-white bg-clip-text text-transparent mb-2">
                 {stat.value}
               </div>
               <div className="text-gray-300 text-lg">{stat.desc}</div>

@@ -15,7 +15,7 @@ export default function HomeTestimonials() {
   const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
   return (
-    <section className="py-24 bg-transparent">
+    <section className="py-24 bg-transparent relative">
       <div className="max-w-5xl mx-auto text-center mb-14 px-6 md:px-0">
         <h2 className="font-serif font-light md:text-5xl text-4xl text-[#3a4251] mb-3">
           What My Clients Say
@@ -24,7 +24,7 @@ export default function HomeTestimonials() {
           Real experiences from people I’ve had the privilege to help.
         </p>
         {/* Decorative underline */}
-        <div className="w-16 h-1 bg-yellow-100 rounded-full mt-6 mb-0 mx-auto"></div>
+        <div className="w-16 h-1 bg-gray-100 rounded-full mt-6 mb-0 mx-auto"></div>
       </div>
 
       <div className="relative max-w-5xl mx-auto px-6">
@@ -78,6 +78,14 @@ export default function HomeTestimonials() {
             <ChevronRight className="h-6 w-6" />
           </Button>
         </div>
+      </div>
+
+      {/* Refined gradient fade and wave divider for seamless transition */}
+      <div className="absolute left-0 right-0 bottom-0 w-full h-24 pointer-events-none z-20">
+        {/* Wave SVG divider for transition */}
+        <svg className="absolute left-0 right-0 bottom-0 w-full h-full" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0,40 C480,80 960,0 1440,40 L1440,80 L0,80 Z" fill="lab(96.1596% -.0823438 -1.13575)" />
+        </svg>
       </div>
     </section>
   );
