@@ -9,14 +9,13 @@ export default function NavBar() {
 
   const links = [
     { href: "/", label: "Home" },
-    { href: "/demo", label: "Demo" },
     { href: "/internal", label: "Internal" },
-    { href: "/about", label: "About" },
+    { href: "/pricing", label: "Pricing" },
     { href: "#contact", label: "Contact" },
   ];
 
   return (
-    <nav className="w-full border-b border-gray-200 bg-white sticky top-0 z-50">
+    <nav className="w-full border-b border-gray-200 bg-[#F2F0EF] sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">

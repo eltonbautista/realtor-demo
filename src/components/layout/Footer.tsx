@@ -15,7 +15,8 @@ export default function Footer() {
             <h3 className="uppercase text-lg font-bold mb-2 tracking-wide heading-font">INNOVATE</h3>
             <ul className="space-y-1 text-sm">
               <li><Link href="/" className="hover:underline text-base">Home</Link></li>
-              <li><Link href="/demo" className="hover:underline text-base">Demo</Link></li>
+              {/* <li><Link href="/demo" className="hover:underline text-base">Demo</Link></li> */}
+              <li><Link href="/pricing" className="hover:underline text-base">Pricing</Link></li>
               <li><Link href="/internal" className="hover:underline text-base">Description Generator</Link></li>
             </ul>
             {/* <h3 className="uppercase text-base font-bold mt-6 mb-2 tracking-wide">Services</h3>

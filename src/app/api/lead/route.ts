@@ -21,7 +21,12 @@ export async function POST(req: Request) {
           - budgetRange: string (if provided)
           - preApproved: true | false | "unknown"
           - timeline: string (e.g. "immediate", "3-6 months", "unknown")
-          - priorityScore: 1-10 (10 = very hot lead, 1 = low quality)`
+          - priorityScore: 1-10 (10 = very hot lead, 1 = low quality)
+          
+          If the lead does not provide enough info, make your best guess based on typical real estate behavior.
+          If the lead is preApproved the priorityScore should be above 5 at least, if not priorityScore should be 5 or below.
+          Additionally, if their budgetRange is $500k+ priorityScore should be at least 7.
+          `
         },
         {
           role: "user",

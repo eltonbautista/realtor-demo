@@ -47,13 +47,13 @@ export default function HomeProblemSolving() {
   return (
     <section className="w-full py-12 md:py-16 px-6 md:px-0"
       style={{
-        backgroundImage: "linear-gradient(170deg, #020817 40%, white 50%)"
+        backgroundImage: "linear-gradient(170deg, #020817 40%, #F2F0EF 50%)"
       }}
     >
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <RevealOnScroll>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-12 text-white">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-12 text-white heading-font">
             Most Realtor Websites Are Just{" "} <br/>
             <span className="bg-gradient-to-r from-blue-800 to-white bg-clip-text text-transparent">
               Online Business Cards

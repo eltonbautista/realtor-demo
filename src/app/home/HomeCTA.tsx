@@ -2,6 +2,7 @@
 import { useRef, useState, useEffect } from "react";
 import { Mail, Calendar, Play, MapPin } from "lucide-react";
 import RevealOnScroll from "@/components/layout/RevealOnScroll";
+import FormButton from "@/components/layout/FormButton";
 
 const TRAIL_LENGTH = 20;
 
@@ -39,11 +40,11 @@ export default function HomeCTA() {
   }
 
   return (
-    <section className="w-full bg-white py-16 px-6">
+    <section className="w-full bg-[#F2F0EF] py-16 px-6">
       <RevealOnScroll>
         <div
           ref={cardRef}
-          className="relative max-w-5xl mx-auto bg-gradient-to-br from-[#101c3a] via-[#181e3a] to-[#181e3a] rounded-2xl shadow-xl px-6 sm:px-12 py-14 flex flex-col items-center text-center border border-[#232736] overflow-hidden cursor-none"
+          className="relative max-w-7xl mx-auto bg-gradient-to-br from-[#101c3a] via-[#181e3a] to-[#181e3a] rounded-2xl shadow-xl px-6 sm:px-12 py-14 flex flex-col items-center text-center border border-[#232736] overflow-hidden cursor-none"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
           onMouseMove={handleMouseMove}
@@ -98,16 +99,10 @@ export default function HomeCTA() {
             </span>
           </h2>
           <p className="text-white text-lg mb-10 max-w-2xl mx-auto">
-            Get the professional website system that builds instant credibility, showcases your expertise, and converts browsers into your next commission check.
+            Get the professional website system that builds instant credibility, showcases your expertise, and <span className="font-bold">converts browsers into your next commission check</span>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 w-full">
-            <a
-              href="/demo"
-              className="flex items-center justify-center gap-2 px-8 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg shadow transition w-full sm:w-auto"
-            >
-              <Play className="w-5 h-5" />
-              See It Live
-            </a>
+            <FormButton buttonText="Book a Demo" />
             {/* <a
               href="/book"
               className="flex items-center justify-center gap-2 px-8 py-3 rounded-xl bg-black/80 hover:bg-black text-white font-bold text-lg shadow transition border border-gray-700 w-full sm:w-auto"
@@ -116,7 +111,7 @@ export default function HomeCTA() {
               Book a Free Call
             </a> */}
           </div>
-          <div className="text-gray-400 text-base mb-2 text-white font-semibold">Book A Demo:</div>
+          <div className="text-gray-400 text-base mb-2 text-white font-semibold italic">99% of the time a single qualified client pays for your website.</div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-blue-300 text-base">
             <a
               href="mailto:solutions@realtorsitespro.ca"

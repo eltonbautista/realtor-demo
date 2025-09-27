@@ -1,4 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 @import "tailwindcss";
+
+.audiowide-regular {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 :root {
   --background: #ffffff;
@@ -10,7 +18,7 @@ html {
 }
 
 .heading-font {
-  font-family: 'Poppins', serif;
+  font-family: "Poppins", serif;
 }
 
 @theme inline {

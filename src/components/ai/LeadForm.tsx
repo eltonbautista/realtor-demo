@@ -19,6 +19,7 @@ const PREAPPROVED = ["yes", "no", "in process"];
 export default function LeadForm({ listingId }: Props) {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [aiSummary, setAiSummary] = useState<string | null>(null);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -34,11 +35,15 @@ export default function LeadForm({ listingId }: Props) {
     e?.preventDefault();
     setLoading(true);
     try {
-      await fetch("/api/lead", {
+      const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...form, listingId }),
       });
+      const data = await res.json();
+      if (data.ok && data.aiSummary) {
+        setAiSummary(data.aiSummary);
+      }
       setSent(true);
     } catch {
       alert("Failed to send lead. Please try again.");
@@ -47,12 +52,42 @@ export default function LeadForm({ listingId }: Props) {
     }
   }
 
-  if (sent)
+  if (sent) {
+    let parsedSummary: any = null;
+    let cleanSummary = aiSummary;
+    if (aiSummary) {
+      // Remove Markdown code block markers if present
+      cleanSummary = aiSummary.replace(/```json|```/g, '').trim();
+    }
+    try {
+      parsedSummary = cleanSummary ? JSON.parse(cleanSummary) : null;
+    } catch {
+      parsedSummary = null;
+    }
     return (
       <div className="p-3 text-center text-[#3a4251] font-semibold">
-        Thanks! We&apos;ll be in touch shortly.
+        {/* Thanks! We&apos;ll be in touch shortly.<br /> */}
+        {parsedSummary ? (
+          <div className="mt-6 bg-[#f4f7fa] border border-[#e6eaf1] rounded-lg p-4 text-left text-[#232746]">
+            <div className="font-bold mb-2 text-blue-400">AI Lead Summary - FOR DEMO PURPOSES ONLY.</div>
+            <ul className="text-sm space-y-1">
+              <li><span className="font-semibold text-[#3a4251]">Summary:</span> {parsedSummary.summary}</li>
+              <li><span className="font-semibold text-[#3a4251]">Client Type:</span> {parsedSummary.buyerType}</li>
+              <li><span className="font-semibold text-[#3a4251]">Budget Range:</span> {parsedSummary.budgetRange}</li>
+              <li><span className="font-semibold text-[#3a4251]">Pre-Approved:</span> {String(parsedSummary.preApproved)}</li>
+              <li><span className="font-semibold text-[#3a4251]">Timeline:</span> {parsedSummary.timeline}</li>
+              <li><span className="font-semibold text-[#3a4251]">Priority Score:</span> {parsedSummary.priorityScore}</li>
+            </ul>
+          </div>
+        ) : aiSummary ? (
+          <div className="mt-6 bg-[#f4f7fa] border border-[#e6eaf1] rounded-lg p-4 text-left text-[#232746]">
+            <div className="font-bold mb-2 text-blue-400">AI Lead Summary</div>
+            <pre className="whitespace-pre-wrap text-sm">{aiSummary}</pre>
+          </div>
+        ) : null}
       </div>
     );
+  }
 
   return (
     <form

@@ -34,7 +34,7 @@ export default function HomeHero() {
               transition={{ duration: 0.8, delay: animDelay }}
             >
               <span className="relative px-1" style={{ display: "inline-block" }}>
-                <span className="relative z-10 font-extrabold bg-gradient-to-r from-white via-pink-500 to-blue-800 bg-clip-text text-transparent animate-gradient-move text-5xl sm:text-6xl md:text-7xl drop-shadow-[0_0_16px_rgba(0,176,255,0.7)]">
+                <span className="heading-font relative z-10 font-extrabold bg-gradient-to-r from-white via-pink-500 to-blue-800 bg-clip-text text-transparent animate-gradient-move text-5xl sm:text-6xl md:text-7xl drop-shadow-[0_0_16px_rgba(0,176,255,0.7)]">
                   Automatically.
                 </span>
                 <span

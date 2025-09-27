@@ -1,15 +1,16 @@
 import { ExternalLink, Rocket } from "lucide-react";
 import RevealOnScroll from "@/components/layout/RevealOnScroll";
+import FormButton from "@/components/layout/FormButton";
 
 export default function HomeDemo() {
   return (
-    <section className="w-full bg-[#020817] py-12 md:py-16 px-6" id="demo">
+  <section className="w-full bg-[#020817] py-18 md:py-24 px-10" id="demo">
       <RevealOnScroll>
-          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+          <div className="max-w-[90rem] mx-auto flex flex-col lg:flex-row items-center gap-20">
             {/* Left: Text & Features */}
-            <div className="flex-1 w-full max-w-xl">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 text-white">
-                See It In Action:{" "}
+            <div className="flex-1 w-full max-w-2xl">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-10 text-white heading-font">
+                See It In Action:{" "} <br/>
                 <span className="bg-gradient-to-r from-blue-800 to-white bg-clip-text text-transparent">
                   Live Demo
                 </span>
@@ -17,7 +18,7 @@ export default function HomeDemo() {
               <p className="text-white text-lg mb-8">
                 Experience exactly how our AI-powered realtor websites capture and qualify leads automatically. This is a real working example.
               </p>
-              <ul className="mb-8 space-y-3">
+              <ul className="mb-12 space-y-5 text-xl">
                 <li className="flex items-start gap-3">
                   <span className="mt-1 w-2 h-2 rounded-full bg-blue-400 inline-block" />
                   <span className="text-gray-400 text-base">
@@ -37,19 +38,11 @@ export default function HomeDemo() {
                   </span>
                 </li>
               </ul>
-              <a
-                href="/demo"
-                target="_self"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg shadow transition"
-              >
-                <ExternalLink className="w-5 h-5" />
-                Book A Demo
-              </a>
+              <FormButton buttonText="Book a Demo" />
             </div>
             {/* Right: Demo Card */}
             <div className="flex-1 w-full flex justify-center">
-              <div className="relative bg-[#181d29] rounded-2xl shadow-xl px-8 py-12 w-full max-w-md flex flex-col items-center text-center border border-[#232736]">
+              <div className="relative bg-[#181d29] rounded-2xl shadow-xl px-8 py-12 w-full max-w-2xl grid justify-items-center items-center text-center border border-[#232736]" style={{ minHeight: '600px' }}>
                 {/* Live Demo badge */}
                 <div className="absolute top-6 right-6">
                   <span className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-blue-800 text-white text-sm font-semibold shadow">
@@ -57,13 +50,16 @@ export default function HomeDemo() {
                     Live Demo
                   </span>
                 </div>
-                <Rocket className="w-12 h-12 text-blue-800 mb-6" />
-                <div className="text-xl font-semibold text-white mb-2">
-                  Interactive Demo Site
-                </div>
-                <div className="text-gray-400 text-base">
-                  Click to explore AI features
-                </div>
+                <video
+                  src="/videos/demo-vid.mp4"
+                  controls
+                  autoPlay
+                  muted
+                  loop
+                  className="rounded-2xl bg-black border border-blue-800 shadow"
+                  style={{ width: '95%', height: '95%', objectFit: 'contain', maxHeight: '540px' }}
+                  poster="/images/demo-vid-poster.jpg"
+                />
               </div>
             </div>
             </div>
